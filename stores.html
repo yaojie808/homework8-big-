@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8"/>
+	<title>1024门店</title>
+	<style type="text/css">
+/*共用代码部分：导航*/
+/*通用设置*/
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		ul,li{		
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+
+/*导航栏*/
+		.list{
+			position: absolute;
+			top:0px;
+			left:0px;
+			width: 100%;
+			height: 50px;
+			background-color: rgba(0,0,0);
+			opacity: 0.8;
+			
+		}
+		.nav{
+			width: 600px;
+			height: 50px;
+			position: absolute;
+			right: 200px;
+		}
+		.nav>li{
+			display:inline-block;
+			width:110px;
+			height:50px;
+			text-align:center;
+			line-height:50px;
+			vertical-align:top;
+		}
+		.nav>li>a{
+			color:white;
+		}
+		.nav>li:hover >a{
+			color:red;
+		}
+		/*二级导航*/
+		.hide{
+			display:none;
+			background-color:rgba(0,0,0);
+		}
+
+		.hide a{
+			color:white;
+		}
+		.nav>li:hover .hide{
+			display:block;
+		}
+		.hide>li:hover a{
+			color: red;
+			background-color:rgba(0,0,0);
+		}
+
+/*动态红包部分*/
+		.redpacket{
+			position: fixed;
+			height: 240px;
+			width: 240px;
+			top: 200px;
+			right: 0px;
+		}
+		.reda{
+			position: fixed;
+			height: 240px;
+			width: 240px;
+			top: 200px;
+			right: 0px;
+		}
+		#right{
+			position: fixed;
+			height: 240px;
+			width: 240px;
+			top: 200px;
+			right: 0px;
+		}
+
+/*正文*/
+		.stores-wrap{
+			position: absolute;
+			top: 50px;
+			width: 100%;
+			height: 1200px;
+		}
+		.stores{
+			position: absolute;
+			top: 50px;
+			right:150px;
+			width: 1100px;
+			height: 1200px;
+		}
+	/*题目*/
+		#p1{
+			position: absolute;
+			top: 10px;
+			height: 100px;
+			width: 300px;
+			right: 480px;
+		}
+	/*搜索*/
+		.search{
+			position: absolute;
+			top: 150px;
+			width: 1200px;
+			height: 40px;
+
+		}
+	/*左侧*/
+		.search1{
+			border-bottom: 2px red solid;
+			position: absolute;
+			width: 220px;
+		}
+		form{
+			width: 300px;
+		}
+		select{
+			border: 0px;
+		}
+		#search11{
+			border: 0px;
+			position: absolute;
+			left: 105px;
+			width: 110px;
+			height: 25px;
+		}
+		/*.notice{
+			position: absolute;
+			width: 20px;
+			height: 10px;
+			top: 30px;
+			left: 105px;
+		}*/
+		#button1{
+			position: absolute;
+			left: 230px;
+			width: 50px;
+			height: 30px;
+			background-color: white;
+			color:red;
+			border: 2px solid red;
+			border-radius:4em;
+
+		}
+	/*右侧*/
+		#more{
+			position: absolute;
+			right:240px;
+			color: red;
+		}
+	/*门店图文介绍*/
+		#shop1{
+			position: absolute;
+			height: 280px;
+			width: 400px;
+			top: 240px;
+		}
+		#h1{
+			position: absolute;
+			top: 240px;
+			left: 600px;
+			color: red;
+		}
+		#d1{
+			position: absolute;
+			top: 320px;
+			left: 500px;
+		}
+		#d1 p{
+			height: 60px;
+			line-height: 60px;
+			font-size: 20px;
+		}
+
+		#shop2{
+			position: absolute;
+			height: 280px;
+			width: 400px;
+			top: 580px;/*加图片高度加60*/
+		}
+		#h2{
+			position: absolute;
+			top: 580px;
+			left: 600px;
+			color: red;
+		}
+		#d2{
+			position: absolute;
+			top: 660px;
+			left: 500px;
+		}
+		#d2 p{
+			height: 60px;
+			line-height: 60px;
+			font-size: 20px;
+		}
+
+		#shop3{
+			position: absolute;
+			height: 280px;
+			width: 400px;
+			top: 920px;/*加图片高度加60*/
+		}
+		#h3{
+			position: absolute;
+			top: 920px;
+			left: 600px;
+			color: red;
+		}
+		#d3{
+			position: absolute;
+			top: 1000px;
+			left: 500px;
+		}
+		#d3 p{
+			height: 60px;
+			line-height: 60px;
+			font-size: 20px;
+		}
+
+		#shop4{
+			position: absolute;
+			height: 280px;
+			width: 400px;
+			top: 1260px;/*加图片高度加60*/
+		}
+		#h4{
+			position: absolute;
+			top: 1260px;
+			left: 600px;
+			color: red;
+		}
+		#d4{
+			position: absolute;
+			top: 1320px;
+			left: 500px;
+		}
+		#d4 p{
+			height: 60px;
+			line-height: 60px;
+			font-size: 20px;
+		}
+
+		#shop5{
+			position: absolute;
+			height: 280px;
+			width: 400px;
+			top: 1600px;/*加图片高度加60*/
+		}
+		#h5{
+			position: absolute;
+			top: 1600px;
+			left: 600px;
+			color: red;
+		}
+		#d5{
+			position: absolute;
+			top: 1660px;
+			left: 500px;
+		}
+		#d5 p{
+			height: 60px;
+			line-height: 60px;
+			font-size: 20px;
+		}
+		
+
+
+	</style>
+</head>
+<body>
+<!-- 共用部分：导航 -->
+	<div class="list" id="list">
+	<ul class="nav">
+        <li>
+            <a href="#">首页</a>
+        </li>
+        <li>
+            <a href="#">美食菜单</a>
+            <ul class="hide">
+                <li>
+                    <a href="#">锅底</a>
+                </li>
+                <li>
+                    <a href="#">蘸料</a>
+                </li>
+                <li>
+                    <a href="#">涮菜</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">门店预定</a>
+            <ul class="hide">
+                <li>
+                    <a href="#">门店介绍</a>
+                </li>
+                <li>
+                    <a href="#">立即预定</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">会员专区</a>
+            <ul class="hide">
+                <li>
+                    <a href="#">关于会员</a>
+                </li>
+                <li>
+                    <a href="#">会员权益</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">关于我们</a>
+            <ul class="hide">
+                <li>
+                    <a href="#">公司介绍</a>
+                </li>
+                <li>
+                    <a href="#">企业文化</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+	</div>
+
+<!-- 右侧红包动图部分 -->
+	<div class="redpacket" onclick="redpacket()">
+		<a class="reda"><img id = "right" src="images/redpacket.gif"></a>
+	</div>
+
+<!-- 正文：门店介绍 -->
+	<div class="stores-wrap">
+		<div class="stores">
+			<img id="p1" src="images/background.jpg">
+			<div class="search">
+		<!-- 左侧 -->
+				<div class="search1">
+					<form>
+						<select style="font-size:20px">
+						<option value="ShiJiazhung">石家庄</option>
+						<option value="ShangHai">上海</option>
+						<option value="ChongQing">重庆</option>
+						<option value="ChengDu">成都</option>
+						<option value="BeiJing">北京</option>
+						<option value="ChengDu">天津</option>
+					</select>
+					<input type = "text" id = "search11" placeholder="门店搜索" />
+					<button id="button1">搜索</button>
+					</form>
+				</div>
+
+		<!-- 右侧 -->
+			<a  id="more" href="#">查看更多</a>
+			</div>
+
+		<!-- 门店信息 -->
+			<ul class="information">
+				<li class="store1-wrap">
+					<div class="store1">
+						<img id="shop1" src="images/shop1.jpeg">
+						<h2 id="h1">石家庄门店</h2>
+						<div id="d1">
+							<p>营业时间：周一至周六9:00-22:00</p>
+							<p>门店地址：石家庄市勒泰6层666号</p>
+							<p>订餐电话：888-234456；666-234234
+							</p>
+						</div>
+					</div>
+					<div class="store2">
+						<img id="shop2" src="images/shop2.jpg">
+						<h2 id="h2">上海门店</h2>
+						<div id="d2">
+							<p>营业时间：周一至周六9:00-22:00</p>
+							<p>门店地址：上海市浦东新区888号666弄</p>
+							<p>订餐电话：888-234256；7-268234
+							</p>
+						</div>
+					</div>
+					<div class="store3">
+						<img id="shop3" src="images/shop3.jpeg">
+						<h2 id="h3">重庆门店</h2>
+						<div id="d3">
+							<p>营业时间：周一至周日8:00-22:00</p>
+							<p>门店地址：重庆万达广场4层</p>
+							<p>订餐电话：000-23426；666-385739
+							</p>
+						</div>
+					</div>
+					<div class="store4">
+						<img id="shop4" src="images/shop4.jpeg">
+						<h2 id="h4">北京门店</h2>
+						<div id="d4">
+							<p>营业时间：周一至周日7:00-22:00</p>
+							<p>门店地址：北京市勒泰6层6683号</p>
+							<p>订餐电话：888-324456；666-234234
+							</p>
+						</div>
+					</div>
+					<div class="store5">
+						<img id="shop5" src="images/shop5.jpg">
+						<h2 id="h5">天津门店</h2>
+						<div id="d5">
+							<p>营业时间：周一至周六9:00-22:00</p>
+							<p>门店地址：天津市勒泰6层666号</p>
+							<p>订餐电话：888-234456；666-234234
+							</p>
+						</div>
+					</div> 
+				</li>
+			</ul>
+		</div>
+	</div>
+
+<!-- js -->
+	<script type="text/javascript">
+		// var button1 = document.getElementById('button1');
+		// button1.setAttribute("onclick","log();");
+		// function log(){
+		// 	var notice = document.getElementsByClassName('notice')[0];
+		// 	var search11 = document.getElementById('search11');
+		// 	if(search11.value == ''){
+		// 		notice.innerHTML = "请输入门店";
+		// 	}
+		// }
+		function redpacket(){
+			alert("发红包啦！");
+		}
+	</script>
+</body>
+</html>
