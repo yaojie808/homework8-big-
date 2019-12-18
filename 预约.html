@@ -3,6 +3,9 @@
 <head>
 	<title>预约</title>
 	<style type="text/css">
+		*:focus{
+			outline: none;
+		}
 		body{
 			background-position: -150px 40px;
 			background-image:url("预定界面3.jpg");
@@ -33,47 +36,82 @@
 			color: rgb(145,56,42);
 		}
 		#t1{
-			top:120px; 
+			top:110px; 
 		}
 		#t2{
-			top: 180px;
+			top: 170px;
 		}
 		#t3{
-			top: 240px;
+			top: 230px;
 		}
 		#t4{
 			top: 300px;
 		}
 		#t5{
-			top: 370px;
+			top: 380px;
 		}
 		.shu{
 			position: absolute;
 			left: 330px;
 		}
-		p{
+		.p1{
 			margin: 0px;
+			position: absolute;
+			top: 270px;
+			left: 340px;
+			color: rgb(145,56,42);
 		}
 		#s1{
-			top: 120px;
+			top: 110px;
 		}
 		#s2{
-			top: 180px;
+			top: 170px;
 		}
 		#s3{
-			top: 240px;
+			top: 230px;
 		}
 		#s4{
 			top: 300px;
 		}
 		#s5{
-			top: 370px;
+			top: 380px;
 		}
 		.i{
 			width: 200px;
 			height: 40px;
 			border: 2px solid rgb(145,56,42);
 			border-radius: 10%;
+		}
+		.chongzhi{
+			position: absolute;
+			top: 440px;
+			width: 350px;
+			height: 30px;
+			left: 125px;
+			border: 1px solid rgb(145,56,42);
+			border-radius: 10%;
+		}
+		.tijiao{
+			position: absolute;
+			top: 490px;
+			height: 30px;
+			left: 125px;
+			width: 350px;
+			border: 1px solid rgb(145,56,42);
+			border-radius: 10%;
+		}
+		input{
+			background-color: rgb(145,56,42);
+		}
+		select{
+			background-color: rgb(145,56,42);
+		}
+		.p2{
+			position: absolute;
+			top: 350px;
+			left: 340px;
+			color: rgb(145,56,42);
+			margin: 0px;
 		}
 	</style>
 </head>
@@ -84,9 +122,9 @@
 				<th>预约</th>
 			</table>
 			<div class="tou" id="t1">姓名</div>
-			<div class="shu" id="s1"><input type="text" name="" value="请输入姓名"/ class="i" onclick="ac();"></div>
+			<div class="shu" id="s1"><input type="text" name="" value="请输入姓名"/ class="i" onclick="ac()" onfocus="value=''"></div>
 			<div class="tou" id="t2">输入手机号码</div>
-			<div class="shu" id="s2"><input type="text" name="" value="请输入你的手机号码"  class="i" /></div>
+			<div class="shu" id="s2"><input type="text" name="" value="请输入你的手机号码"  class="i" onfocus="value=''" /></div>
 			<div class="tou" id="t3">用餐人数：</div>
 			<div class="shu" id="s3">
 				<select class="i">
@@ -100,9 +138,10 @@
 					<option value="8">8</option>
 				</select>
 			</div>
-			<p>*方便为您安排座位</p>
+			<p class="p1">*方便为您安排座位</p>
 			<div class="tou" id="t4">预约时间</div>
-			<div class="shu" id="s4"><input type="text" name="time" value="请输入您要预约的时间" class="i"></div>
+			<div class="shu" id="s4"><input type="text" name="time" value="请输入您要预约的时间" class="i" onfocus="value=''"></div>
+			<p class="p2">请以“XXXX-XX-XX”的形式填写</p>
 			<div class="tou" id="t5">选择店铺</div>
 			<div class="shu" id="s5">
 				<select name="stroe" class="i">
@@ -120,11 +159,5 @@
 	</div>
 </body>
 <script type="text/javascript">
-	var in=getElementsByTagName(input);
-	function ac() {
-		in.value='null';
-	}
-
-
 </script>
 </html>
