@@ -5,9 +5,12 @@
 	<style type="text/css">
 		body{
 			background-position: -150px 40px;
-			background-image:url("图片/预定界面3.jpg");
+			background-image:url("预定界面3.jpg");
 		}
-		.yuyue{			
+		.yuyue{
+			position: absolute;
+			left: 850px;	
+			top: 100px;		
 			width: 600px;
 			height: 550px;
 			border: 3px solid rgb(145,56,42);
@@ -44,6 +47,34 @@
 		#t5{
 			top: 370px;
 		}
+		.shu{
+			position: absolute;
+			left: 330px;
+		}
+		p{
+			margin: 0px;
+		}
+		#s1{
+			top: 120px;
+		}
+		#s2{
+			top: 180px;
+		}
+		#s3{
+			top: 240px;
+		}
+		#s4{
+			top: 300px;
+		}
+		#s5{
+			top: 370px;
+		}
+		.i{
+			width: 200px;
+			height: 40px;
+			border: 2px solid rgb(145,56,42);
+			border-radius: 10%;
+		}
 	</style>
 </head>
 <body>
@@ -52,35 +83,48 @@
 			<table>
 				<th>预约</th>
 			</table>
-			<div class="tou" id="t1">姓名</div><input type="text" name="" value="请输入姓名" class="shu" /></br>
-			<div class="tou" id="t2">输入手机号码</div><input type="text" name="" value="请输入你的手机号码" class="shu" /></br>
+			<div class="tou" id="t1">姓名</div>
+			<div class="shu" id="s1"><input type="text" name="" value="请输入姓名"/ class="i" onclick="ac();"></div>
+			<div class="tou" id="t2">输入手机号码</div>
+			<div class="shu" id="s2"><input type="text" name="" value="请输入你的手机号码"  class="i" /></div>
 			<div class="tou" id="t3">用餐人数：</div>
-			<select name="number" class="chose" class="shu">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-			</select>
+			<div class="shu" id="s3">
+				<select class="i">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select>
+			</div>
 			<p>*方便为您安排座位</p>
-			<div class="tou" id="t4">预约时间</div><input type="text" name="time" value="请输入您要预约的时间" class="shu"></br>
+			<div class="tou" id="t4">预约时间</div>
+			<div class="shu" id="s4"><input type="text" name="time" value="请输入您要预约的时间" class="i"></div>
 			<div class="tou" id="t5">选择店铺</div>
-			<select name="stroe" id="stroe" class="shu">
-				<option>石家庄店</option>
-				<option>上海店</option>
-				<option>重庆店</option>
-				<option>成都店</option>
-				<option>北京店</option>
-				<option>天津店</option>
-			</select></br>
+			<div class="shu" id="s5">
+				<select name="stroe" class="i">
+					<option>石家庄店</option>
+					<option>上海店</option>
+					<option>重庆店</option>
+					<option>成都店</option>
+					<option>北京店</option>
+					<option>天津店</option>
+				</select>
+			</div>
 			<input type="reset" name="" value="重置" class="chongzhi">
 			<input type="button" name="submit" value="提交" class="tijiao" />
-
 		</form>
 	</div>
-
 </body>
+<script type="text/javascript">
+	var in=getElementsByTagName(input);
+	function ac() {
+		in.value='null';
+	}
+
+
+</script>
 </html>
