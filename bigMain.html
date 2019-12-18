@@ -16,25 +16,25 @@
 		}
 		/*轮播图*/
 		.bigimg{
-			width: 1519px;
+			width: 1469px;
 			height: 600px;
 			position: relative;
-			left:0px;
+			left:50px;
 			overflow: hidden;
 		}
 		.slider{
-			width: 9114px;
+			width: 8814px;
 			position: absolute;
-			left: -1519px;
+			left: -1469px;
 		}
 		.slide{
-			width: 1519px;
+			width: 1469px;
 			height: 600px;
 			overflow: hidden;
 			float: left;
 		}
 		.slide>img{
-			width: 1519px;
+			width: 1469px;
 			height: 600px;
 		}
 		.bigimg>span{
@@ -218,17 +218,18 @@
 		.vetimg{
 			width: 200px;
 			position:relative;
-			left: 400px;
+			left: 650px;
 			top:150px;
 		}
 		.vet{
-			width:1300px;
-			height: 400px;
+			width:1319px;
+			height: 350px;
 			position:relative;
 			left: 200px;
 			top:200px;
 		}
 		.vet>li{
+			width:290px;
 			display: inline-block;
 		}
 		.vet>li > img{
@@ -237,14 +238,14 @@
 			
 		}
 		.vetc{
-			width: 1300px;
-			height: 150px;
+			width: 1319px;
+			height: 20px;
 			position: relative;
 			left: 200px;
-			top:100px;
+			top:120px;
 		}
 		.vetc>li{
-			width: 250px;
+			width: 280px;
 			display: inline-block;
 			font-family:宋体; 
 			font-size:40px; 
@@ -254,20 +255,20 @@
 		}
 		/*侧边栏*/
 		.side{
-			height:1315px;
+			height:800px;
 			width:300px;
 			background:rgba(0,0,0);
 			opacity: 0.8;
-			position: absolute; 
+			position: fixed; 
 			left:-250px;
-			top:600px;
+			top:0px;
 		}
 		.span1{
 			width:40px;
 			color: grey;
 			position:absolute;
 			right:0px;
-			top:400px;
+			top:150px;
 		}
 		.span1> p{
 			font-size:50px;
@@ -275,22 +276,22 @@
 		}
 		.span2{
 		  width:235px;
-		  line-height:30px;
-		  font-size: 23px;
+		  line-height:25px;
+		  font-size: 18px;
 		  font-family: 宋体;
 		  font-weight: bolder;
 		  position: absolute;
-		  top:150px;
+		  top:80px;
 		  left: 15px;
 		}
 		.span3{
 			width:235px;
-		  	line-height:30px;
-		  	font-size: 18px;
+		  	line-height:25px;
+		  	font-size: 15px;
 		  	font-family: 宋体;
 		  	font-weight: bolder;
 		  	position: absolute;
-		  	top:800px;
+		  	top:430px;
 		  	left: 15px;
 		}
 		.white{
@@ -300,7 +301,14 @@
 			color: red;
 		}
 
-		
+		/*返回顶部*/
+		#to_top{
+			right: 30px; 
+			bottom: 30px; 
+			position: fixed; 
+			cursor: pointer;
+			color: black;
+		}
 	</style>
 	<script src ="animate.js"></script>
 </head>
@@ -365,16 +373,25 @@
 	<li><img src="菜品\秋葵 .jpg"></li>
 	<li><img src="菜品\金针菇 .jpg"></li>
 	<li><img src="菜品\肥牛.jpg"></li>
-	<li><img src="菜品\撒尿牛丸.jpg"></li>
 </ul>
 <ul class="vetc">
 	<li>白玉菇</li>
 	<li>秋葵</li>
 	<li>金针菇</li>
 	<li>肥牛</li>
-	<li>撒尿牛丸</li>
 </ul>
-
+<ul class="vet">
+	<li><img src="菜品\白玉菇 .jpg"></li>
+	<li><img src="菜品\秋葵 .jpg"></li>
+	<li><img src="菜品\金针菇 .jpg"></li>
+	<li><img src="菜品\肥牛.jpg"></li>
+</ul>
+<ul class="vetc">
+	<li>白玉菇</li>
+	<li>秋葵</li>
+	<li>金针菇</li>
+	<li>肥牛</li>
+</ul>
 <!-- 侧边栏	 -->
 <div class="side" id="side">
 	<span class="span1">
@@ -414,6 +431,11 @@
 	</span>
 </div>
 
+<!-- 返回顶部 -->
+<div id="to_top" title="返回顶部">
+  	<img src="大图/top.png" width="40" height="40" />
+  	<p>返回顶部</p>
+</div>
 <!-- 菜单栏 -->
 <div class="list" id="list">
 	<img class = "logo1" src="大图\logo1.jpg">
@@ -489,9 +511,9 @@ function next(){
 		isMoving = true;
 		index++;
 		navChange();
-		animate(slider,{left:-1519*index},function () {
+		animate(slider,{left:-1469*index},function () {
 			if(index == 5){
-				slider.style.left = "-1519px";
+				slider.style.left = "-1469px";
 				index = 1;
 			}
 			isMoving = false;
@@ -505,9 +527,9 @@ function prev(){
 		isMoving = true;
 		index--;
 		navChange();
-		animate(slider,{left:-1519*index},function () {
+		animate(slider,{left:-1469*index},function () {
 			if(index == 0){
-				slider.style.left = "-9114px";
+				slider.style.left = "-8814px";
 				index = 4;
 			}
 			isMoving = false;
@@ -544,7 +566,7 @@ for(var i = 0; i<oNavlist.length; i++){
 	oNavlist[i].onclick = function () {
 		index = this.index + 1;
 		navChange();
-		animate(slider,{left:-1519*index});
+		animate(slider,{left:-1469*index});
 
 	}
 }
@@ -586,6 +608,23 @@ function navChange() {
   		},30)
 	}
 	
+// 返回顶部
+window.onscroll = function(){
+
+  	var distance = document.documentElement.scrollTop || document.body.scrollTop; //距离页面顶部的距离
+
+  	if( distance >= 300 ) { //当距离顶部超过300px时，显示图片
+    	document.getElementById('to_top').style.display = "";
+  	} else { //距离顶部小于300px，隐藏图片
+    	document.getElementById('to_top').style.display = "none";
+  	}
+
+  	var toTop = document.getElementById("to_top"); //获取图片所在的div
+
+  	toTop.onclick = function(){ //点击图片时触发的点击事件
+    	document.documentElement.scrollTop = document.body.scrollTop = 0; //页面移动到顶部
+  	}
+}
 </script>
 </body>
 </html>
