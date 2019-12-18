@@ -60,6 +60,7 @@
 			top: 270px;
 			left: 340px;
 			color: rgb(145,56,42);
+			font-size: 12px;
 		}
 		#s1{
 			top: 110px;
@@ -112,6 +113,7 @@
 			left: 340px;
 			color: rgb(145,56,42);
 			margin: 0px;
+			font-size: 12px;
 		}
 	</style>
 </head>
@@ -122,9 +124,9 @@
 				<th>预约</th>
 			</table>
 			<div class="tou" id="t1">姓名</div>
-			<div class="shu" id="s1"><input type="text" name="" value="请输入姓名"/ class="i" onclick="ac()" onfocus="value=''"></div>
+			<div class="shu" id="s1"><input type="text" name="" value="请输入姓名"/ class="i" onfocus="if (value=='请输入姓名') {value=''}" onblur="if (value=='') {value='请输入姓名'}"></div>
 			<div class="tou" id="t2">输入手机号码</div>
-			<div class="shu" id="s2"><input type="text" name="" value="请输入你的手机号码"  class="i" onfocus="value=''" /></div>
+			<div class="shu" id="s2"><input type="text" name="" value="请输入你的手机号码"  class="i" onfocus="if (value=='请输入你的手机号码') {value=''}" onblur="if (value=='') {value='请输入你的手机号码'}" /></div>
 			<div class="tou" id="t3">用餐人数：</div>
 			<div class="shu" id="s3">
 				<select class="i">
@@ -140,8 +142,8 @@
 			</div>
 			<p class="p1">*方便为您安排座位</p>
 			<div class="tou" id="t4">预约时间</div>
-			<div class="shu" id="s4"><input type="text" name="time" value="请输入您要预约的时间" class="i" onfocus="value=''"></div>
-			<p class="p2">请以“XXXX-XX-XX”的形式填写</p>
+			<div class="shu" id="s4"><input type="text" name="time" value="请输入您要预约的时间" class="i" onfocus="if (value=='请输入您要预约的时间') {value=''}" onblur="if (value=='') {value='请输入您要预约的时间'}"></div>
+			<p class="p2">*请以“XXXX-XX-XX”的形式填写</p>
 			<div class="tou" id="t5">选择店铺</div>
 			<div class="shu" id="s5">
 				<select name="stroe" class="i">
@@ -154,10 +156,14 @@
 				</select>
 			</div>
 			<input type="reset" name="" value="重置" class="chongzhi">
-			<input type="button" name="submit" value="提交" class="tijiao" />
+			<input type="button" name="submit" value="提交" class="tijiao" id="tijiao" />
 		</form>
 	</div>
 </body>
 <script type="text/javascript">
+	var ti=document.getElementById('tijiao');
+	ti.onfocus=function f() {
+		alert("是否提交预约？");
+	}
 </script>
 </html>
