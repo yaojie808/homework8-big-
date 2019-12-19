@@ -33,6 +33,7 @@
 			position: absolute;
 			left: 50px;
 			font-size: 35px;
+			font-family: '楷体';
 			color: rgb(145,56,42);
 		}
 		#t1{
@@ -59,7 +60,7 @@
 			position: absolute;
 			top: 270px;
 			left: 340px;
-			color: rgb(145,56,42);
+			color: rgb(175,135,67);
 			font-size: 12px;
 		}
 		#s1{
@@ -85,35 +86,41 @@
 		}
 		.chongzhi{
 			position: absolute;
-			top: 440px;
-			width: 350px;
-			height: 30px;
-			left: 125px;
+			top: 470px;
+			width: 250px;
+			height: 50px;
+			left: 40px;
 			border: 1px solid rgb(145,56,42);
 			border-radius: 20px;
+			background-color:  rgb(145,56,42);
+			font-size: 25px;
+			font-family: '楷体';
 		}
 		.tijiao{
 			position: absolute;
-			top: 490px;
-			height: 30px;
-			left: 125px;
-			width: 350px;
+			top: 470px;
+			height: 50px;
+			left: 325px;
+			width: 250px;
 			border: 1px solid rgb(145,56,42);
 			border-radius: 20px;
+			background-color: rgb(145,56,42);
+			font-size: 25px;
+			font-family: '楷体';
 		}
 		input{
 			background-color: rgb(40,38,38);
 			color: rgb(175,135,67);
 		}
 		select{
-			background-color: black;
+			background-color: rgb(40,38,38);
 			color: rgb(175,135,67);
 		}
 		.p2{
 			position: absolute;
 			top: 350px;
 			left: 340px;
-			color: rgb(145,56,42);
+			color: rgb(175,135,67);
 			margin: 0px;
 			font-size: 12px;
 		}
@@ -127,9 +134,9 @@
 			</table>
 			<div class="tou" id="t1">姓名</div>
 			<div class="shu" id="s1"><input type="text" name="" value="请输入姓名"/ class="i" onfocus="if (value=='请输入姓名') {value=''}" onblur="if (value=='') {value='请输入姓名'}"></div>
-			<div class="tou" id="t2">输入手机号码</div>
+			<div class="tou" id="t2">手机号码</div>
 			<div class="shu" id="s2"><input type="text" name="" value="请输入你的手机号码"  class="i" onfocus="if (value=='请输入你的手机号码') {value=''}" onblur="if (value=='') {value='请输入你的手机号码'}" /></div>
-			<div class="tou" id="t3">用餐人数：</div>
+			<div class="tou" id="t3">用餐人数</div>
 			<div class="shu" id="s3">
 				<select class="i">
 					<option value="1">1</option>
@@ -163,9 +170,56 @@
 	</div>
 </body>
 <script type="text/javascript">
-	var ti=document.getElementById('tijiao');
-	ti.onclick=function f() {
-		alert("是否提交预约？");
+	// var ti=document.getElementById('tijiao');
+	// // ti.onclick=alert(function () {
+	// // 	var div=document.createElement('DIV');
+	// // 	shield.style.position='absolute';
+	// // 	shield.style.background='rgb(175,135,67)';c
+	// // });
+	// alert=function on(text) {
+	// 	var div=document.createElement('div');
+	// 	div.style.background='black';
+	// 	div.style.position='absolute';
+	// 	div.style.left='50%';
+	// 	div.style.top='50%';		
+	// }
+	// ti.onclick=on("shifouyueyue");
+	window.alert=function(text){
+		//透明遮罩层
+		var mask=document.createElement('div');
+		mask.style.position='fixed';
+		mask.style.zIndex=1000000;
+		mask.style.top=0;
+		mask.style.bottom=0;
+		mask.style.left=0;
+		mask.style.right=0;
+		//实现alert
+		var div=document.createElement('div');
+		div.style.background-color='rgb(175,135,67)';
+		div.style.createElement='#fff';
+		div.style.position='fixed';
+		div.style.zIndex=9999999;
+		div.style.height='60px';
+		div.style.top='10%';
+		div.style.left='50%';
+		div.style.line-height='60px';
+		div.style.border-radius='4px';
+		div.style.font-size='20px';
+		div.style.text-align='center';
+		div.style.padding='0 10px';
+		div.className='animated bounceInDown';
+		div.innerHTML=text;
+		document.getElementsByTagName("body")[0].appendChild(div);
+		document.getElementsByTagName("body")[0].appendChild(mask);
+		var selfObj=document.getElementById("alert");
+		//调整动态位置
+		var alertWidth=window.getComputedStyle(selfObj,null).width;
+		div.style.marginLeft=-parseInt(alertWidth)/2+"px";
+		setTimeout(function(){
+			document.getElementsByTagName("body")[0].removeChild(div);
+			document.getElementsByTagName("body")[0].removeChild(mask);
+		},3000);
 	}
+	alert("是否预约?");
 </script>
 </html>
