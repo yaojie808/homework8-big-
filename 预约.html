@@ -81,7 +81,7 @@
 			width: 200px;
 			height: 40px;
 			border: 2px solid rgb(145,56,42);
-			border-radius: 10%;
+			border-radius: 20px;
 		}
 		.chongzhi{
 			position: absolute;
@@ -90,7 +90,7 @@
 			height: 30px;
 			left: 125px;
 			border: 1px solid rgb(145,56,42);
-			border-radius: 10%;
+			border-radius: 20px;
 		}
 		.tijiao{
 			position: absolute;
@@ -99,13 +99,15 @@
 			left: 125px;
 			width: 350px;
 			border: 1px solid rgb(145,56,42);
-			border-radius: 10%;
+			border-radius: 20px;
 		}
 		input{
-			background-color: rgb(145,56,42);
+			background-color: rgb(40,38,38);
+			color: rgb(175,135,67);
 		}
 		select{
-			background-color: rgb(145,56,42);
+			background-color: black;
+			color: rgb(175,135,67);
 		}
 		.p2{
 			position: absolute;
@@ -162,7 +164,7 @@
 </body>
 <script type="text/javascript">
 	var ti=document.getElementById('tijiao');
-	ti.onfocus=function f() {
+	ti.onclick=function f() {
 		alert("是否提交预约？");
 	}
 </script>
