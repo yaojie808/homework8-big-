@@ -165,61 +165,14 @@
 				</select>
 			</div>
 			<input type="reset" name="" value="重置" class="chongzhi">
-			<input type="button" name="submit" value="提交" class="tijiao" id="tijiao" />
+			<input type="button" name="submit" value="提交" class="tijiao" onclick="on();" />
 		</form>
 	</div>
 </body>
 <script type="text/javascript">
-	// var ti=document.getElementById('tijiao');
-	// // ti.onclick=alert(function () {
-	// // 	var div=document.createElement('DIV');
-	// // 	shield.style.position='absolute';
-	// // 	shield.style.background='rgb(175,135,67)';c
-	// // });
-	// alert=function on(text) {
-	// 	var div=document.createElement('div');
-	// 	div.style.background='black';
-	// 	div.style.position='absolute';
-	// 	div.style.left='50%';
-	// 	div.style.top='50%';		
-	// }
-	// ti.onclick=on("shifouyueyue");
-	window.alert=function(text){
-		//透明遮罩层
-		var mask=document.createElement('div');
-		mask.style.position='fixed';
-		mask.style.zIndex=1000000;
-		mask.style.top=0;
-		mask.style.bottom=0;
-		mask.style.left=0;
-		mask.style.right=0;
-		//实现alert
-		var div=document.createElement('div');
-		div.style.background-color='rgb(175,135,67)';
-		div.style.createElement='#fff';
-		div.style.position='fixed';
-		div.style.zIndex=9999999;
-		div.style.height='60px';
-		div.style.top='10%';
-		div.style.left='50%';
-		div.style.line-height='60px';
-		div.style.border-radius='4px';
-		div.style.font-size='20px';
-		div.style.text-align='center';
-		div.style.padding='0 10px';
-		div.className='animated bounceInDown';
-		div.innerHTML=text;
-		document.getElementsByTagName("body")[0].appendChild(div);
-		document.getElementsByTagName("body")[0].appendChild(mask);
-		var selfObj=document.getElementById("alert");
-		//调整动态位置
-		var alertWidth=window.getComputedStyle(selfObj,null).width;
-		div.style.marginLeft=-parseInt(alertWidth)/2+"px";
-		setTimeout(function(){
-			document.getElementsByTagName("body")[0].removeChild(div);
-			document.getElementsByTagName("body")[0].removeChild(mask);
-		},3000);
+	function on() {
+		alert("是否提交预约？");
 	}
-	alert("是否预约?");
+
 </script>
 </html>
