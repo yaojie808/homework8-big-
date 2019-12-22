@@ -1,176 +1,176 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="gb2312">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lajifenlei</title>
-<style>
-    /*云*/
-    * { margin: 0; padding: 0; border: 0; } 
-    html,body{
-        margin: 0;
-    }
-    @-webkit-keyframes STAR-MOVE {
-         from {
-            background-position:0% 0%
-        }
-        to { 
-            background-position: 600% 0%
-        }
-    }
-     @keyframes STAR-MOVE {
-        from {
-            background-position: 0% 0%
-        }
-        to { 
-            background-position: 600% 0%
-        }
-    }
-    .wall{
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-                
-    }
-    #background{
-        background: black url('img/background.png') repeat-x 5% 0%;
-        background-size: cover;
-        -webkit-animation: STAR-MOVE  200s linear infinite;
-        -moz-animation: STAR-MOVE  200s linear infinite;
-        -ms-animation: STAR-MOVE  200s linear infinite;
-        animation: STAR-MOVE  200s linear infinite;
-    }
-    #midground{
-        background:url('img/midground.png')repeat 20% 0%;
-        z-index: 1;
-        -webkit-animation: STAR-MOVE  100s linear infinite;
-        -moz-animation: STAR-MOVE  100s linear infinite;
-        -ms-animation: STAR-MOVE  100s linear infinite;
-        animation: STAR-MOVE  100s linear infinite;
-    }
-    #foreground{
-        background:url('img/foreground.png')repeat 35% 0%;
-        z-index: 2;
-        -webkit-animation: STAR-MOVE  50s linear infinite;
-        -moz-animation: STAR-MOVE  50s linear infinite;
-        -ms-animation: STAR-MOVE  50s linear infinite;
-        animation: STAR-MOVE  50s linear infinite;
-    }
+<head>
+	<meta charset="gb2312">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lajifenlei</title>
+	<style>
+		/*背景:云*/
+		* { 
+       		margin: 0; 
+       		padding: 0; 
+       		border: 0; 
+       	} 
+	    html,body{
+	    
+	        margin: 0;
+	    }
+	    @-webkit-keyframes STAR-MOVE {
+			from {
+				background-position:0% 0%
+			}
+			to { 
+				background-position: 600% 0%
+			}
+		}
+		 @keyframes STAR-MOVE {
+			from {
+				background-position: 0% 0%
+			}
+			to { 
+				background-position: 600% 0%
+			}
+		}
+		.wall{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;	
+		}
+		div#background{
+			background: black url('img/background.png') repeat-x 5% 0%;
+			background-size: cover;
+			-webkit-animation: STAR-MOVE  200s linear infinite;
+		-moz-animation: STAR-MOVE  200s linear infinite;
+			-ms-animation: STAR-MOVE  200s linear infinite;
+			animation: STAR-MOVE  200s linear infinite;
+		}
+		div#midground{
+			background:url('img/midground.png')repeat 20% 0%;
+			z-index: 1;
+			-webkit-animation: STAR-MOVE  100s linear infinite;
+			-moz-animation: STAR-MOVE  100s linear infinite;
+			-ms-animation: STAR-MOVE  100s linear infinite;
+			animation: STAR-MOVE  100s linear infinite;
+		}
+		div#foreground{
+			background:url('img/foreground.png')repeat 35% 0%;
+			z-index: 2;
+			-webkit-animation: STAR-MOVE  50s linear infinite;
+			-moz-animation: STAR-MOVE  50s linear infinite;
+			-ms-animation: STAR-MOVE  50s linear infinite;
+			animation: STAR-MOVE  50s linear infinite;
+		}
 
-    /*垃圾*/
-    #box1{
-    	width:100px;
-    	height:100px;
-    	
-    	position:absolute;
-    	left:0px;
-    	top:100px;
-    }
-    #box2{
-        width:100px;
-        height:100px;
-        
-        position:absolute;
-        left:200px;
-        top:100px;
-    }
-    #box3{
-        width:100px;
-        height:100px;
-        
-        position:absolute;
-        left:400px;
-        top:100px;
-    }
-  
-</style>
- 
+		/*垃圾分类*/
+		.img1{
+			position: absolute;
+			top: 100px;
+			left:200px;
+		}
+		.img2{
+			position: absolute;
+			top: 100px;
+			left:400px;
+		}
+		.img3{
+			position: absolute;
+			top: 100px;
+			left:600px;
+		}
+		.img4{
+			position: absolute;
+			top: 100px;
+			left:800px;
+		}
+		.img5{
+			position: absolute;
+			top: 100px;
+			left:1000px;
+		}
+		.b1{
+			position: absolute;
+			top: 450px;
+			left:300px;
+		}
+		.b2{
+			position: absolute;
+			top: 450px;
+			left:550px;
+		}
+		.b3{
+			position: absolute;
+			top: 450px;
+			left:800px;
+		}
+		.b4{
+			position: absolute;
+			top: 450px;
+			left:1050px;
+		}
+		.gif{
+			position: absolute;
+			top:-50px;
+			right:0px;
+			visiblity:visible;
+		}
+    </style>
 </head>
 <body>
-     <!-- <script src="animate.js"></script> -->
-
-
-    <!-- 背景：云 -->
-    <div id="background" class="wall"></div>
+	<!-- 背景:云 -->
+	<div id="background" class="wall"></div>
     <div id="midground" class="wall"></div>
     <div id="foreground" class="wall">
-        <div class = "box1" id = "box1">
-            <img src="img/a.png" width="100px" height="100px" />
-        </div>
-        <div class = "box2" id = "box2">
-            <img src="img/b.png" width="100px" height="100px"/>
-        </div>
-        <div class = "box3" id = "box3">
-            <img src="img/d.png" width="100px" height="100px"/>
-        </div>
-    </div>
-    <!-- 垃圾移动 -->
-	<!-- <div class = "box1" id = "box1">
-        <img src="img/a.png" width="100px" height="100px" />
-    </div>
-    <div class = "box2" id = "box2">
-        <img src="img/b.png" width="100px" height="100px"/>
-    </div>
-    <div class = "box3" id = "box3">
-        <img src="img/d.png" width="100px" height="100px"/>
-    </div> -->
-    <script type="text/javascript">
-        window.οnlοad=function(){ 
-    function getStyle(obj,attr){
-        if(obj.currentStyle){
-            return obj.currentStyle[attr];
-        }else{
-            return getComputedStyle(obj,null)[attr];
-        }
-    }
+    	<img src="img/a.png" width="100px" height="100px" class = "img1" id="img1">
+		<img src="img/b.png" width="100px" height="100px" class="img2" id="img2">
+    	<img src="img/c.png" width="100px" height="100px" class="img3" id="img3">
+    	<img src="img/d.png" width="60px" height="60px" class="img4" id="img4">
+    	<img src="img/e.png" width="100px" height="100px" class="img5" id="img5">
+    	<img src="img/b1.png" width="150px" height="250px" class="b1" id="b1">
+    	<img src="img/b2.png" width="150px" height="250px" class="b2" id="b2">
+    	<img src="img/b3.png" width="150px" height="250px" class="b3" id="b3">
+    	<img src="img/b4.png" width="150px" height="250px" class="b4" id="b4">
+    	<img src="img/GIF.gif" width="250px" height="250px" class="gif" id="gif">
 
-    function animate(obj,json,callback){
-        
-        obj.timer = setInterval(function(){
-            var isStop = true;
-            for(var attr in json){
-                var now = 0;
-                if(attr == 'opacity'){
-                    now = parseInt((getStyle(obj,attr)*100));
-                }else{
-                    now = parseInt(getStyle(obj,attr));
-                }
-                var speed = (json[attr] - now)/6;
-                speed = speed>0?Math.ceil(speed):Math.floor(speed);
-                var current = now + speed
-                if(attr == 'opacity'){
-                    obj.style.opacity = current/100 + "px";
-                }else{
-                    obj.style[attr]= current + "px";
-                }
-                if(json[attr] !== current){
-                    isStop = false;
-                }
-            }
-            if(isStop){
-                clearInterval(obj.timer);
-            }
-        },60)    
-    }
-     <!-- </script>
-    <script type="text/javascript"> -->
-        window.onload = function(){
-            document.getElementById("box1").onclick = function(){
-                animate(box1,{left:300,top:300,opacity:20});
-            }
-             document.getElementById("box2").onclick = function(){
-                animate(box2,{left:500,top:300,opacity:20});
-            }
-            document.getElementById("box3").onclick = function(){
-                animate(box3,{left:100,top:300,opacity:20});
-            }
-        }
-    </script>
-    
+    </div>
+	<!-- 垃圾分类 -->
 	
+	<script src="animate.js"></script>
+	<script type="text/javascript">
+	    window.onload = function(){
+	    	var imga = document.getElementById('img1');
+			imga.onclick = function(){
+				animate(imga,{left:800,top:400,opacity:0})
+			}
+			var imgb = document.getElementById('img2');
+			imgb.onclick = function(){
+				animate(imgb,{left:600,top:400,opacity:0})
+			}
+			var imgc = document.getElementById('img3');
+			imgc.onclick = function(){
+				animate(imgc,{left:800,top:400,opacity:0})
+			}
+			var imgd = document.getElementById('img4');
+			imgd.onclick = function(){
+				animate(imgd,{left:400,top:400,opacity:0})
+			}
+			var imge = document.getElementById('img5');
+			imge.onclick = function(){
+				animate(imge,{left:300,top:450,opacity:0})
+			}
+			// 图片跳动
+			// setTimeout(function(){
+			// 	var jump = document.getElementById('gif');
+			// 	if(jump.style.top == 450px)
+			// 		jump.style.top = 400px;
+			// 	else 
+			// 		jump.style.top = 450px;
+			// },100)
+	    }
+		
+	</script>
 </body>
 </html>
