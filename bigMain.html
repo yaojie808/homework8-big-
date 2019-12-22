@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html>body{
+			background-image: url(大图/bimg.png);
+		}
 <head>
 	<title>1024火锅</title>
 	<meta charset="utf-8">
@@ -250,11 +252,11 @@
 		.vetc>li{
 			width: 280px;
 			display: inline-block;
-			/*font-family:宋体;*/ 
-			font-size:30px; 
+			font-family:楷体; 
+			font-size:40px; 
 			font-weight: bolder;
 			text-align: center;
-			color:black;
+			color:#f7b5a1;
 		}
 		/*侧边栏*/
 		.side{
@@ -280,7 +282,7 @@
 		.span2{
 		  width:235px;
 		  line-height:25px;
-		  font-size: 18px;
+		  font-size: 15px;
 		  font-family: 宋体;
 		  font-weight: bolder;
 		  position: absolute;
@@ -294,7 +296,7 @@
 		  	font-family: 宋体;
 		  	font-weight: bolder;
 		  	position: absolute;
-		  	top:430px;
+		  	top:445px;
 		  	left: 15px;
 		}
 		.white{
@@ -327,8 +329,7 @@
 		<div class="slide"><img src="大图/大图4.png" alt=""></div>
 		<div class="slide"><img src="大图/大图2.jpg" alt=""></div>
 	</div>
-	<span id="left"><</span>
-	<span id="right">></span>
+	
 	<ul class="nav" id="nav">
 		<li class="act" id="active"></li>
 		<li></li>
@@ -340,7 +341,7 @@
 
 
 <!-- 锅底 -->
-<div class="potimg"><img src="锅底\特色锅底.jpg"></div>
+<div class="potimg"><img src="锅底\特色锅底.png"></div>
 <div class="pot" id="pot">
 	<div class="pte">
 		<p class="t1">麻辣鸳鸯火锅</p>
@@ -363,14 +364,14 @@
 		<li><img src="锅底\骨汤.jpg"></li>
 	</ul>
 	<ul class="pot2">
-		<li><img src="锅底\番茄锅底.jpg"></li>
-		<li><img src="锅底\菌菇锅底.jpg"></li>
-		<li><img src="锅底\骨汤锅底.jpg"></li>
+		<li><img src="锅底\番茄锅底.png"></li>
+		<li><img src="锅底\菌菇锅底.png"></li>
+		<li><img src="锅底\骨汤锅底.png"></li>
 	</ul>
 </div>
 
 <!-- 菜品 -->
-<div class="vetimg"><img src="菜品\有机菜品.jpg"></div>
+<div class="vetimg"><img src="菜品\有机菜品.png"></div>
 <ul class="vet">
 	<li><img src="菜品\白玉菇 .jpg"></li>
 	<li><img src="菜品\秋葵 .jpg"></li>
@@ -421,10 +422,6 @@
 		<p class="white">联系我们</p>
 		<p class="red">河北省石家庄市裕华区裕翔街道123号</p>
 		<p class="white">意见反馈</p>
-		<form class="red">
-			<textarea cols="29" rows="3" style="background-color:grey color:g">请提交您的建议,我们将进一步改善我们的工作，谢谢！</textarea><br>
-			<input type="submit" value="提交">
-		</form>
 		<p class="white">满意程度</p>
 		<form class="red">
 				<input type="radio" name="满意程度">非常满意
@@ -441,7 +438,7 @@
 </div>
 <!-- 菜单栏 -->
 <div class="list" id="list">
-	<img class = "logo1" src="大图\logo1.jpg">
+	<img class = "logo1" src="大图\logo1.png">
 	<img class = "logo2" src="大图\logo.jpg">
 	<ul class="navl">
         <li>
@@ -541,7 +538,7 @@ function prev(){
 	}	
 }
 
-var timer = setInterval(next,3000);
+var timer = setInterval(next,4000);
 
 //鼠标划入
 bigimg.onmouseover = function () {
@@ -554,14 +551,9 @@ bigimg.onmouseover = function () {
 bigimg.onmouseout = function () {
 	animate(left,{opacity:0});
 	animate(right,{opacity:0});
-	timer = setInterval(next,3000);
+	timer = setInterval(next,4000);
 }
 
-//右箭头点击事件
-right.onclick = next;
-
-//左箭头点击事件
-left.onclick = prev;
 
 //按钮点击事件
 for(var i = 0; i<oNavlist.length; i++){
