@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>预约</title>
+	<style type="text/css">
+		*:focus{
+			outline: none;
+		}
+		body{
+			background-position: -150px 40px;
+			background-image:url("预定界面3.jpg");
+		}
+		.yuyue{
+			position: absolute;
+			left: 850px;	
+			top: 100px;		
+			width: 600px;
+			height: 550px;
+			border: 3px solid rgb(145,56,42);
+			
+		}
+		th{
+			width: 600px;
+			height: 70px;
+			border-bottom: 3px solid rgb(145,56,42);
+			text-align: center;
+			font-size: 60px;
+			font-family: '楷体';
+			color: rgb(145,56,42);
+		}
+		.tou{
+			display: inline-block;
+			position: absolute;
+			left: 50px;
+			font-size: 35px;
+			font-family: '楷体';
+			color: rgb(145,56,42);
+		}
+		#t1{
+			top:110px; 
+		}
+		#t2{
+			top: 170px;
+		}
+		#t3{
+			top: 230px;
+		}
+		#t4{
+			top: 300px;
+		}
+		#t5{
+			top: 380px;
+		}
+		.shu{
+			position: absolute;
+			left: 330px;
+		}
+		.p1{
+			margin: 0px;
+			position: absolute;
+			top: 270px;
+			left: 340px;
+			color: rgb(175,135,67);
+			font-size: 12px;
+		}
+		#s1{
+			top: 110px;
+		}
+		#s2{
+			top: 170px;
+		}
+		#s3{
+			top: 230px;
+		}
+		#s4{
+			top: 300px;
+		}
+		#s5{
+			top: 380px;
+		}
+		.i{
+			width: 200px;
+			height: 40px;
+			border: 2px solid rgb(145,56,42);
+			border-radius: 20px;
+		}
+		.chongzhi{
+			position: absolute;
+			top: 470px;
+			width: 250px;
+			height: 50px;
+			left: 40px;
+			border: 1px solid rgb(145,56,42);
+			border-radius: 20px;
+			background-color:  rgb(145,56,42);
+			font-size: 25px;
+			font-family: '楷体';
+		}
+		.tijiao{
+			position: absolute;
+			top: 470px;
+			height: 50px;
+			left: 325px;
+			width: 250px;
+			border: 1px solid rgb(145,56,42);
+			border-radius: 20px;
+			background-color: rgb(145,56,42);
+			font-size: 25px;
+			font-family: '楷体';
+		}
+		input{
+			background-color: rgb(40,38,38);
+			color: rgb(175,135,67);
+		}
+		select{
+			background-color: rgb(40,38,38);
+			color: rgb(175,135,67);
+		}
+		.p2{
+			position: absolute;
+			top: 350px;
+			left: 340px;
+			color: rgb(175,135,67);
+			margin: 0px;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+	<div class="yuyue">
+		<form>
+			<table>
+				<th>预约</th>
+			</table>
+			<div class="tou" id="t1">姓名</div>
+			<div class="shu" id="s1"><input type="text" name="" value="请输入姓名"/ class="i" onfocus="if (value=='请输入姓名') {value=''}" onblur="if (value=='') {value='请输入姓名'}"></div>
+			<div class="tou" id="t2">手机号码</div>
+			<div class="shu" id="s2"><input type="text" name="" value="请输入你的手机号码"  class="i" onfocus="if (value=='请输入你的手机号码') {value=''}" onblur="if (value=='') {value='请输入你的手机号码'}" /></div>
+			<div class="tou" id="t3">用餐人数</div>
+			<div class="shu" id="s3">
+				<select class="i">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select>
+			</div>
+			<p class="p1">*方便为您安排座位</p>
+			<div class="tou" id="t4">预约时间</div>
+			<div class="shu" id="s4"><input type="text" name="time" value="请输入您要预约的时间" class="i" onfocus="if (value=='请输入您要预约的时间') {value=''}" onblur="if (value=='') {value='请输入您要预约的时间'}"></div>
+			<p class="p2">*请以“XXXX-XX-XX”的形式填写</p>
+			<div class="tou" id="t5">选择店铺</div>
+			<div class="shu" id="s5">
+				<select name="stroe" class="i">
+					<option>石家庄店</option>
+					<option>上海店</option>
+					<option>重庆店</option>
+					<option>成都店</option>
+					<option>北京店</option>
+					<option>天津店</option>
+				</select>
+			</div>
+			<input type="reset" name="" value="重置" class="chongzhi">
+			<input type="button" name="submit" value="提交" class="tijiao" onclick="on();" />
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	function on() {
+		alert("是否提交预约？");
+	}
+
+</script>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>body{
+			background-image: url(大图/bimg.png);
+		}
+<head>
+	<title>1024火锅</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		a{
+			text-decoration:none;
+		}
+		ul{
+			list-style-type:none;
+		}
+		body{
+			background-image: url(大图/bimg.png);
+		}
+		/*轮播图*/
+		.bigimg{
+			width: 1469px;
+			height: 600px;
+			position: relative;
+			left:50px;
+			overflow: hidden;
+		}
+		.slider{
+			width: 8814px;
+			position: absolute;
+			left: -1469px;
+		}
+		.slide{
+			width: 1469px;
+			height: 600px;
+			overflow: hidden;
+			float: left;
+		}
+		.slide>img{
+			width: 1469px;
+			height: 600px;
+		}
+		.bigimg>span{
+			display: block;
+			width: 30px;
+			height:50px;
+			text-align: center;
+			cursor: pointer;
+			color: white;
+			top:250px;
+			line-height: 50px;
+			background: rgb(255,0,0);
+			font-size: 30px;
+			position: absolute;
+			opacity: 0;
+		}
+		#left{
+			left: 0px;
+		}
+		#right{
+			right:0px;
+		}
+		.nav{
+			position: absolute;
+			left: 700px;
+			bottom: 20px;
+		}
+		.nav>li{
+			float: left;
+			width: 15px;
+			height:15px;
+			background:#ccc;
+			cursor: pointer;
+			margin: 0 10px;
+			border-radius: 50%;
+		}
+		.nav #active{
+			background-color:red;
+		}
+		/*菜单栏*/
+		.list{
+			position: fixed;
+			top:0px;
+			left:0px;
+			width: 100%;
+			height: 50px;
+			background-color: rgba(0,0,0);
+			opacity: 0.8;
+			
+		}
+		.navl{
+			width: 600px;
+			height: 50px;
+			position: absolute;
+			right: 200px;
+		}
+		.navl>li{
+			display:inline-block;
+			width:110px;
+			height:50px;
+			text-align:center;
+			line-height:50px;
+			vertical-align:top;
+		}
+		.navl li>a{
+			color:white;
+		}
+		.navl>li:hover >a{
+			color:red;
+		}
+		.logo1{
+			width: 100px;
+			height: 50px;
+			float: left;
+			margin-left: 50px;
+		}
+		.logo2{
+			width: 100px;
+			height: 50px;
+			float: left;
+			margin-left: 0px;
+		}
+
+		/*二级导航*/
+		.hide{
+			display:none;
+			background-color:rgba(0,0,0);
+		}
+
+		.hide a{
+			color:white;
+		}
+		.navl>li:hover .hide{
+			display:block;
+		}
+		.hide>li:hover a{
+			color: red;
+			background-color:rgba(0,0,0);
+		}
+		
+		/*特色锅底*/
+		.potimg{
+			width: 200px;
+			position:relative;
+			left: 400px;
+			top:50px;
+		}
+		.pot{
+			width:700px;
+			height: 500px;
+			position: relative;
+			left: 200px;
+			top:100px;
+		}
+		.pte{
+			width: 250px;
+			height: 450px;
+			position: absolute;
+			left:0px;
+			top:0px;
+			color: white;
+			background-color: black;
+			opacity: 0.7;
+			font-family:  宋体;
+		}
+		.ite{
+			width: 450px;
+			height: 450px;
+			position: absolute;
+			left: 250px;
+			top: 0px;
+			overflow: hidden;
+
+		}
+		.t1{
+			text-align: center;
+			font-size: 30px;
+			line-height: 50px;
+			font-family:  宋体;
+		}
+		.t2{
+			text-align: center;
+			font-size: 25px;
+			line-height: 50px;
+		}
+		.p1{
+			font-size: 15px;
+			line-height: 25px;
+		}
+
+		/*锅底图片*/
+		.poti{
+			width:500px;
+			height:600px;
+			position: absolute;
+			left:950px;
+			top:650px;
+		}
+		.pot1{
+			width:300px;
+			height:600px;
+		}
+		.pot1> li{
+			width: 300px;
+			height: 200px;
+			overflow: hidden;
+		}
+		.pot2{
+			width: 200px;
+			height: 600px;
+			position: absolute;
+			left: 300px;
+			top:0px;
+		}
+		.pot2> li{
+			width: 200px;
+			height: 250px;
+		}
+
+		/*有机菜品*/
+		.vetimg{
+			width: 200px;
+			position:relative;
+			left: 650px;
+			top:150px;
+		}
+		.vet{
+			width:1319px;
+			height: 350px;
+			position:relative;
+			left: 200px;
+			top:200px;
+		}
+		.vet>li{
+			width:290px;
+			display: inline-block;
+		}
+		.vet>li > img{
+			width:250px;
+			height: 250px;
+			
+		}
+		.vetc{
+			width: 1319px;
+			height: 20px;
+			position: relative;
+			left: 200px;
+			top:120px;
+		}
+		.vetc>li{
+			width: 280px;
+			display: inline-block;
+			font-family:楷体; 
+			font-size:40px; 
+			font-weight: bolder;
+			text-align: center;
+			color:#f7b5a1;
+		}
+		/*侧边栏*/
+		.side{
+			height:800px;
+			width:300px;
+			background:rgba(0,0,0);
+			opacity: 0.8;
+			position: fixed; 
+			left:-250px;
+			top:0px;
+		}
+		.span1{
+			width:40px;
+			color: grey;
+			position:absolute;
+			right:0px;
+			top:150px;
+		}
+		.span1> p{
+			font-size:50px;
+			font-weight: bolder;
+		}
+		.span2{
+		  width:235px;
+		  line-height:25px;
+		  font-size: 15px;
+		  font-family: 宋体;
+		  font-weight: bolder;
+		  position: absolute;
+		  top:80px;
+		  left: 15px;
+		}
+		.span3{
+			width:235px;
+		  	line-height:25px;
+		  	font-size: 15px;
+		  	font-family: 宋体;
+		  	font-weight: bolder;
+		  	position: absolute;
+		  	top:445px;
+		  	left: 15px;
+		}
+		.white{
+			color: grey;
+		}
+		.red{
+			color: red;
+		}
+
+		/*返回顶部*/
+		#to_top{
+			right: 30px; 
+			bottom: 30px; 
+			position: fixed; 
+			cursor: pointer;
+			color: black;
+		}
+	</style>
+	<script src ="animate.js"></script>
+</head>
+<body>
+
+<!-- 轮播图 -->
+<div class="bigimg" id="bigimg">
+	<div class="slider" id ="slider">
+		<div class="slide"><img src="大图/大图4.png" alt=""></div>
+		<div class="slide"><img src="大图/大图2.jpg" alt=""></div>
+		<div class="slide"><img src="大图/大图1.jpg" alt=""></div>
+		<div class="slide"><img src="大图/大图3.jpg" alt=""></div>
+		<div class="slide"><img src="大图/大图4.png" alt=""></div>
+		<div class="slide"><img src="大图/大图2.jpg" alt=""></div>
+	</div>
+	
+	<ul class="nav" id="nav">
+		<li class="act" id="active"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+
+
+<!-- 锅底 -->
+<div class="potimg"><img src="锅底\特色锅底.png"></div>
+<div class="pot" id="pot">
+	<div class="pte">
+		<p class="t1">麻辣鸳鸯火锅</p>
+		<p class="t2">--本店主打--</p>
+		<p class="p1">&nbsp &nbsp辣而微麻,汤底有料。锅底是在加入了豆腐、鸭血、大蒜以及更多的香料和药材后经过八个小时的精心熬制而成，更加香浓美味。而且已经在熬好之后将花椒、辣椒、八角等调料全部过滤掉，免去客人的后顾之忧，在涮品放入之后可以即捞即食。且鸭血，豆腐可以免费续加。涮品秘制。涮品以特级牛肉、秘制肥肠、牛肚、牛筋、油条、贡丸等为佳，这些都是经过独家秘制的配方处理过的，涮后很入味，入口可以享受到肉在嘴里跳动的快感。</p>
+	</div>
+	<div class="ite">
+		<img src="锅底/麻辣鸳鸯.jpeg">
+	</div>
+
+</div>
+
+
+
+<!-- 锅底图片 -->
+<div class="poti">
+	<ul class="pot1">
+		<li><img src="锅底\番茄锅.jpg"></li>
+		<li><img src="锅底\菌菇.jpg"></li>
+		<li><img src="锅底\骨汤.jpg"></li>
+	</ul>
+	<ul class="pot2">
+		<li><img src="锅底\番茄锅底.png"></li>
+		<li><img src="锅底\菌菇锅底.png"></li>
+		<li><img src="锅底\骨汤锅底.png"></li>
+	</ul>
+</div>
+
+<!-- 菜品 -->
+<div class="vetimg"><img src="菜品\有机菜品.png"></div>
+<ul class="vet">
+	<li><img src="菜品\白玉菇 .jpg"></li>
+	<li><img src="菜品\秋葵 .jpg"></li>
+	<li><img src="菜品\金针菇 .jpg"></li>
+	<li><img src="菜品\肥牛.jpg"></li>
+</ul>
+<ul class="vetc">
+	<li>白玉菇</li>
+	<li>秋葵</li>
+	<li>金针菇</li>
+	<li>肥牛</li>
+</ul>
+<ul class="vet">
+	<li><img src="菜品\毛肚.png"></li>
+	<li><img src="菜品\土豆.jpg"></li>
+	<li><img src="菜品\虾滑.jpg"></li>
+	<li><img src="菜品\油麦菜.jpg"></li>
+</ul>
+<ul class="vetc">
+	<li>毛肚</li>
+	<li>土豆</li>
+	<li>虾滑</li>
+	<li>油麦菜</li>
+</ul>
+<!-- 侧边栏	 -->
+<div class="side" id="side">
+	<span class="span1">
+		<p>1</p>
+		<p>0</p>
+		<p>2</p>
+		<p>4</p>
+		<br><br>
+		<h3>点</h3>
+		<h3>击</h3>
+		<h3>此</h3>
+		<h3>处</h3>
+		<h3>了</h3>
+		<h3>解</h3>
+		<h3>我</h3>
+		<h3>们</h3>
+	</span>
+	<span class="span2">
+		<p class="white">&nbsp&nbsp1024是一家以经营川味火锅为主，融汇各地火锅特色于一体的大型直营连锁企业。公司始终秉承“服务至上、顾客至上”的理念，以创新为核心，改变传统的标准化、单一化的服务，提倡个性化的特色服务，致力于为顾客提供愉悦的用餐服务；在管理上，倡导双手改变命运的价值观，为员工创建公平公正的工作环境，实施人性化和亲情化的管理模式，提升员工价值。</p><br><br>
+	</span>
+	<span class="span3">
+		<p class="white">服务热线</p>
+		<p class="red">888-8888</p>
+		<p class="white">联系我们</p>
+		<p class="red">河北省石家庄市裕华区裕翔街道123号</p>
+		<p class="white">意见反馈</p>
+		<p class="white">满意程度</p>
+		<form class="red">
+				<input type="radio" name="满意程度">非常满意
+				<input type="radio" name="满意程度">满意
+				<input type="radio" name="满意程度">不满意
+		</form>
+	</span>
+</div>
+
+<!-- 返回顶部 -->
+<div id="to_top" title="返回顶部">
+  	<img src="大图/top.png" width="40" height="40" />
+  	<p>返回顶部</p>
+</div>
+<!-- 菜单栏 -->
+<div class="list" id="list">
+	<img class = "logo1" src="大图\logo1.png">
+	<img class = "logo2" src="大图\logo.jpg">
+	<ul class="navl">
+        <li>
+            <a href="#">首页</a>
+        </li>
+        <li>
+            <a href="#">美食菜单</a>
+            <ul class="hide">
+                <li>
+                    <a href="#">锅底</a>
+                </li>
+                <li>
+                    <a href="#">蘸料</a>
+                </li>
+                <li>
+                    <a href="#">涮菜</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">门店预定</a>
+            <ul class="hide">
+                <li>
+                    <a href="#">门店介绍</a>
+                </li>
+                <li>
+                    <a href="#">立即预定</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">会员专区</a>
+            <ul class="hide">
+                <li>
+                    <a href="#">关于会员</a>
+                </li>
+                <li>
+                    <a href="#">会员权益</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">关于我们</a>
+            <ul class="hide">
+                <li>
+                    <a href="#">公司介绍</a>
+                </li>
+                <li>
+                    <a href="#">企业文化</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+//轮播图
+var bigimg = document.getElementById('bigimg');
+var oNavlist = document.getElementById('nav').children;
+var slider = document.getElementById('slider');
+var left = document.getElementById('left');
+var right = document.getElementById('right');
+var index = 1;
+var timer;
+var isMoving = false;
+
+//轮播下一张图片函数
+function next(){
+	if(!isMoving){
+		isMoving = true;
+		index++;
+		navChange();
+		animate(slider,{left:-1469*index},function () {
+			if(index == 5){
+				slider.style.left = "-1469px";
+				index = 1;
+			}
+			isMoving = false;
+		});
+	}
+}
+
+//轮播上一张图片函数
+function prev(){
+	if (!isMoving) {
+		isMoving = true;
+		index--;
+		navChange();
+		animate(slider,{left:-1469*index},function () {
+			if(index == 0){
+				slider.style.left = "-8814px";
+				index = 4;
+			}
+			isMoving = false;
+		});
+		
+	}	
+}
+
+var timer = setInterval(next,4000);
+
+//鼠标划入
+bigimg.onmouseover = function () {
+	animate(left,{opacity:50});
+	animate(right,{opacity:50});
+	clearInterval(timer);
+}
+
+//鼠标划出
+bigimg.onmouseout = function () {
+	animate(left,{opacity:0});
+	animate(right,{opacity:0});
+	timer = setInterval(next,4000);
+}
+
+
+//按钮点击事件
+for(var i = 0; i<oNavlist.length; i++){
+	oNavlist[i].index = i;
+	oNavlist[i].onclick = function () {
+		index = this.index + 1;
+		navChange();
+		animate(slider,{left:-1469*index});
+
+	}
+}
+
+//导航变化
+function navChange() {
+	for(var i =0 ;i<oNavlist.length;i++){
+		oNavlist[i].id = '';
+	}
+	if(index == 5){
+		oNavlist[0].id = "active";
+	}else if(index == 0){
+		oNavlist[3].id = "active";
+	}else{
+		oNavlist[index-1].id = "active";	
+	}
+}
+// 侧边栏
+	window.onload=function(){
+  		var side=document.getElementById('side');
+  		side.onmouseover=function (){
+  			startmove(0,10);
+  		}
+  		side.onmouseout=function (){
+  			startmove(-250,-10);
+  		}
+	}
+	var timer=null;
+	function startmove(target,speed){
+  		var side=document.getElementById('side');
+  		clearInterval(timer);
+  		timer=setInterval(function (){
+    		if(side.offsetLeft == target){
+      			clearInterval(timer);
+    		}
+    		else{    
+      			side.style.left=side.offsetLeft+speed+'px';
+    		}
+  		},30)
+	}
+	
+// 返回顶部
+window.onscroll = function(){
+
+  	var distance = document.documentElement.scrollTop || document.body.scrollTop; //距离页面顶部的距离
+
+  	if( distance >= 300 ) { //当距离顶部超过300px时，显示图片
+    	document.getElementById('to_top').style.display = "";
+  	} else { //距离顶部小于300px，隐藏图片
+    	document.getElementById('to_top').style.display = "none";
+  	}
+
+  	var toTop = document.getElementById("to_top"); //获取图片所在的div
+
+  	toTop.onclick = function(){ //点击图片时触发的点击事件
+    	document.documentElement.scrollTop = document.body.scrollTop = 0; //页面移动到顶部
+  	}
+}
+</script>
+</body>
+</html>
