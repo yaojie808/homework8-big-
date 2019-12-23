@@ -171,7 +171,7 @@
 			border: 0px;
 			position: absolute;
 			top: 10px;
-			background-color: #e89338;
+			background-color: #bfbfbf;
 		}
 		#search11{
 			border: 0px;
@@ -180,18 +180,18 @@
 			left: 105px;
 			width: 120px;
 			height: 25px;
-			background-color: #e89338;
+			background-color: #bfbfbf;
 		}
 		#button1{
 			position: absolute;
 			left: 230px;
 			width: 60px;
 			height: 40px;
-			background-color: white;
 			color:black;
-			border: 2px solid red;
-			border-radius:4em;
-			background-color: #e89338;
+			font-weight: 800;
+			/*border: 2px solid red;*/
+			border-radius:2em;
+			background-color: #bfbfbf;
 
 		}
 	/*右侧*/
@@ -213,23 +213,28 @@
 		#h1{
 			position: absolute;
 			top: 240px;
-			left: 630px;
+			left: 600px;
 			color: red;
+			font-size: 40px;
 		}
 		#yu1{
 			position: absolute;
 			top: 240px;
 			height: 40px;
-			width: 50px;
+			width: 70px;
 			left: 900px;
-			background-color: gold;
-			border-radius:4em;
+			background-color: red;
+			opacity: 0.8;
+			border-radius:2em;
 		}
 		#yu1 p{
 			font-size: 20px;
 			font-weight: 800;
 			line-height: 40px;
 			text-align: center;
+		}
+		#yu1 a{
+			color: black;
 		}
 		#d1{
 			position: absolute;
@@ -253,8 +258,28 @@
 		#h2{
 			position: absolute;
 			top: 580px;
-			left: 630px;
+			left: 600px;
 			color: red;
+			font-size: 40px;
+		}
+		#yu2{
+			position: absolute;
+			top: 580px;
+			height: 40px;
+			width: 70px;
+			left: 900px;
+			background-color: red;
+			opacity: 0.8;
+			border-radius:2em;
+		}
+		#yu2 p{
+			font-size: 20px;
+			font-weight: 800;
+			line-height: 40px;
+			text-align: center;
+		}
+		#yu2 a{
+			color: black;
 		}
 		#d2{
 			position: absolute;
@@ -279,8 +304,28 @@
 		#h3{
 			position: absolute;
 			top: 920px;
-			left: 630px;
+			left: 600px;
 			color: red;
+			font-size: 40px;
+		}
+		#yu3{
+			position: absolute;
+			top: 920px;
+			height: 40px;
+			width: 70px;
+			left: 900px;
+			background-color: red;
+			opacity: 0.8;
+			border-radius:2em;
+		}
+		#yu3 p{
+			font-size: 20px;
+			font-weight: 800;
+			line-height: 40px;
+			text-align: center;
+		}
+		#yu3 a{
+			color: black;
 		}
 		#d3{
 			position: absolute;
@@ -305,8 +350,28 @@
 		#h4{
 			position: absolute;
 			top: 1260px;
-			left: 630px;
+			left: 600px;
 			color: red;
+			font-size: 40px;
+		}
+		#yu4{
+			position: absolute;
+			top: 1260px;
+			height: 40px;
+			width: 70px;
+			left: 900px;
+			background-color: red;
+			opacity: 0.8;
+			border-radius:2em;
+		}
+		#yu4 p{
+			font-size: 20px;
+			font-weight: 800;
+			line-height: 40px;
+			text-align: center;
+		}
+		#yu4 a{
+			color: black;
 		}
 		#d4{
 			position: absolute;
@@ -330,8 +395,28 @@
 		#h5{
 			position: absolute;
 			top: 1600px;
-			left: 630px;
+			left: 600px;
 			color: red;
+			font-size: 40px;
+		}
+		#yu5{
+			position: absolute;
+			top: 1600px;
+			height: 40px;
+			width: 70px;
+			left: 900px;
+			background-color: red;
+			opacity: 0.8;
+			border-radius:2em;
+		}
+		#yu5 p{
+			font-size: 20px;
+			font-weight: 800;
+			line-height: 40px;
+			text-align: center;
+		}
+		#yu5 a{
+			color: black;
 		}
 		#d5{
 			position: absolute;
@@ -362,8 +447,9 @@
 		}
 		#timedown{
 			color: #e6dc64;
-			font-size: 20px;
-			font-weight: 800;
+			font-size: 25px;
+			font-weight: bolder;
+			/*font-family: "楷体";*/
 			height:100px;
 			width: 200px;
 
@@ -377,6 +463,12 @@
 			left: 100px;
 			top:80px;
 		}
+		#time11{
+			font-size: 30px;
+		}
+		#time12{
+			font-size: 15px;
+		}
 		.time2{
 			width:150px;
 			position: absolute;
@@ -385,6 +477,18 @@
 			text-align: center;
 			left: 75px;
 			top:120px;
+		}
+		#time21{
+			font-size: 30px;
+		}
+		#time22{
+			font-size: 15px;
+		}
+		#time23{
+			font-size: 30px;
+		}
+		#time24{
+			font-size: 15px;
 		}
 	</style>
 </head>
@@ -407,7 +511,7 @@
 <!-- 正文：门店介绍 -->
 	<div class="stores-wrap">
 		<div class="stores">
-			<img id="p1" src="images/门店预定.jpg">
+			<img id="p1" src="images/门店预定.png">
 			<div class="search">
 		<!-- 左侧 -->
 				<div class="search1">
@@ -435,7 +539,7 @@
 					<div class="store1">
 						<img id="shop1" src="images/shop1.jpeg">
 						<h2 id="h1">石家庄门店</h2>
-						<div id="yu1"><p><a>预约</a></p></div>
+						<div id="yu1"><p><a href="#">预约</a></p></div>
 						<div id="d1">
 							<p>营业时间：周一至周六9:00-22:00</p>
 							<p>门店地址：石家庄市勒泰6层666号</p>
@@ -446,7 +550,7 @@
 					<div class="store2">
 						<img id="shop2" src="images/shop2.jpg">
 						<h2 id="h2">上海门店</h2>
-						<div id="yu1"><p><a>预约</a></p></div>
+						<div id="yu2"><p><a href="#">预约</a></p></div>
 						<div id="d2">
 							<p>营业时间：周一至周六9:00-22:00</p>
 							<p>门店地址：上海市浦东新区888号666弄</p>
@@ -457,6 +561,7 @@
 					<div class="store3">
 						<img id="shop3" src="images/shop3.jpeg">
 						<h2 id="h3">重庆门店</h2>
+						<div id="yu3"><p><a href="#">预约</a></p></div>
 						<div id="d3">
 							<p>营业时间：周一至周日8:00-22:00</p>
 							<p>门店地址：重庆万达广场4层</p>
@@ -467,6 +572,7 @@
 					<div class="store4">
 						<img id="shop4" src="images/shop4.jpeg">
 						<h2 id="h4">北京门店</h2>
+						<div id="yu4"><p><a href="#">预约</a></p></div>
 						<div id="d4">
 							<p>营业时间：周一至周日7:00-22:00</p>
 							<p>门店地址：北京市勒泰6层6683号</p>
@@ -477,6 +583,7 @@
 					<div class="store5">
 						<img id="shop5" src="images/shop5.jpg">
 						<h2 id="h5">天津门店</h2>
+						<div id="yu5"><p><a href="#">预约</a></p></div>
 						<div id="d5">
 							<p>营业时间：周一至周六9:00-22:00</p>
 							<p>门店地址：天津市勒泰6层666号</p>
@@ -500,7 +607,7 @@
 	<!-- 菜单栏 -->
 <div class="list" id="list">
 	<img class = "logo1" src="大图\logo1.png">
-	<img class = "logo2" src="大图\logo.png">
+	<img class = "logo2" src="大图\logo.jpg">
 	<ul class="navl">
         <li>
             <a href="#">首页</a>
@@ -579,9 +686,9 @@
 	    	var minute = Math.floor(second / 60);
 	    	second %= 60;
 	    	// var str = '<p class="time1">' + tow(day) + '天</p>'
-	        var str = '<p class="time1">' + tow(hour) + '小时</p>'
-	        	+ '<p class="time2">' + tow(minute) + '分钟'
-	        	+ tow(second) + '秒</p>';
+	        var str = '<p class="time1"><span id="time11">' + tow(hour) + '</span><span id="time12">小时</span></p>'
+	        	+ '<p class="time2"><span id="time21">' + tow(minute) + '</span><span id="time22">分钟</span><span id="time23">'
+	        	+ tow(second) + '</span><span id="time24">秒</span></p>';
 	    	oSpan.innerHTML = str;
 	  	}
  	 	getDate();
