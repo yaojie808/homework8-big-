@@ -3,6 +3,7 @@
 <head>
 	<title>1024火锅</title>
 	<meta charset="utf-8">
+	<script src ="animate.js"></script>
 	<style type="text/css">
 		*{
 			margin:0;
@@ -15,7 +16,7 @@
 			list-style-type:none;
 		}
 		body{
-			background-image: url(大图/bimg.png);
+			background-image: url(大图/bimg.jpg);
 		}
 		/*轮播图*/
 		.bigimg{
@@ -232,7 +233,9 @@
 			top:200px;
 		}
 		.vet>li{
-			width:290px;
+			width:250px;
+			height: 250px;
+			margin-right: 30px;
 			display: inline-block;
 		}
 		.vet>li > img{
@@ -250,11 +253,26 @@
 		.vetc>li{
 			width: 280px;
 			display: inline-block;
-			/*font-family:宋体;*/ 
-			font-size:30px; 
+			font-family:楷体; 
+			font-size:40px; 
 			font-weight: bolder;
 			text-align: center;
 			color:black;
+		}
+		#veta:hover{
+			border:5px solid;
+			border-color: red;
+		}
+		
+		#veta1:hover{
+			border:5px solid;
+			border-color: red;
+		}
+		#vetca{
+			font-size: 50px;
+		}
+		#vetca1{
+			font-size: 50px;
 		}
 		/*侧边栏*/
 		.side{
@@ -280,7 +298,7 @@
 		.span2{
 		  width:235px;
 		  line-height:25px;
-		  font-size: 18px;
+		  font-size: 15px;
 		  font-family: 宋体;
 		  font-weight: bolder;
 		  position: absolute;
@@ -294,7 +312,7 @@
 		  	font-family: 宋体;
 		  	font-weight: bolder;
 		  	position: absolute;
-		  	top:430px;
+		  	top:445px;
 		  	left: 15px;
 		}
 		.white{
@@ -313,7 +331,7 @@
 			color: black;
 		}
 	</style>
-	<script src ="animate.js"></script>
+	
 </head>
 <body>
 
@@ -340,7 +358,7 @@
 
 
 <!-- 锅底 -->
-<div class="potimg"><img src="锅底\特色锅底.jpg"></div>
+<div class="potimg"><img src="锅底\特色锅底.png"></div>
 <div class="pot" id="pot">
 	<div class="pte">
 		<p class="t1">麻辣鸳鸯火锅</p>
@@ -363,34 +381,34 @@
 		<li><img src="锅底\骨汤.jpg"></li>
 	</ul>
 	<ul class="pot2">
-		<li><img src="锅底\番茄锅底.jpg"></li>
-		<li><img src="锅底\菌菇锅底.jpg"></li>
-		<li><img src="锅底\骨汤锅底.jpg"></li>
+		<li><img src="锅底\番茄锅底.png"></li>
+		<li><img src="锅底\菌菇锅底.png"></li>
+		<li><img src="锅底\骨汤锅底.png"></li>
 	</ul>
 </div>
 
 <!-- 菜品 -->
-<div class="vetimg"><img src="菜品\有机菜品.jpg"></div>
-<ul class="vet">
-	<li><img src="菜品\白玉菇 .jpg"></li>
-	<li><img src="菜品\秋葵 .jpg"></li>
-	<li><img src="菜品\金针菇 .jpg"></li>
-	<li><img src="菜品\肥牛.jpg"></li>
+<div class="vetimg"><img src="菜品\有机菜品.png"></div>
+<ul class="vet" id="vet">
+	<li class="veta" id="veta"><img  src="菜品\白玉菇 .jpg" alt=""></li>
+	<li ><img src="菜品\秋葵 .jpg" alt=""></li>
+	<li ><img src="菜品\金针菇 .jpg" alt=""></li>
+	<li ><img src="菜品\肥牛.jpg" alt=""></li>
 </ul>
-<ul class="vetc">
-	<li>白玉菇</li>
+<ul class="vetc" id="vetc">
+	<li class="vetca" id="vetca">白玉菇</li>
 	<li>秋葵</li>
 	<li>金针菇</li>
 	<li>肥牛</li>
 </ul>
-<ul class="vet">
-	<li><img src="菜品\毛肚.png"></li>
-	<li><img src="菜品\土豆.jpg"></li>
-	<li><img src="菜品\虾滑.jpg"></li>
-	<li><img src="菜品\油麦菜.jpg"></li>
+<ul class="vet" id="vet1">
+	<li class="veta1" id="veta1"><img  src="菜品\毛肚.png" alt=""></li>
+	<li ><img  src="菜品\土豆.jpg" alt=""></li>
+	<li ><img  src="菜品\虾滑.jpg" alt=""></li>
+	<li ><img  src="菜品\油麦菜.jpg" alt=""></li>
 </ul>
-<ul class="vetc">
-	<li>毛肚</li>
+<ul class="vetc" id="vetc1">
+	<li class="vetca1" id="vetca1">毛肚</li>
 	<li>土豆</li>
 	<li>虾滑</li>
 	<li>油麦菜</li>
@@ -421,10 +439,6 @@
 		<p class="white">联系我们</p>
 		<p class="red">河北省石家庄市裕华区裕翔街道123号</p>
 		<p class="white">意见反馈</p>
-		<form class="red">
-			<textarea cols="29" rows="3" style="background-color:grey color:g">请提交您的建议,我们将进一步改善我们的工作，谢谢！</textarea><br>
-			<input type="submit" value="提交">
-		</form>
 		<p class="white">满意程度</p>
 		<form class="red">
 				<input type="radio" name="满意程度">非常满意
@@ -441,7 +455,7 @@
 </div>
 <!-- 菜单栏 -->
 <div class="list" id="list">
-	<img class = "logo1" src="大图\logo1.jpg">
+	<img class = "logo1" src="大图\logo1.png">
 	<img class = "logo2" src="大图\logo.jpg">
 	<ul class="navl">
         <li>
@@ -507,7 +521,81 @@ var right = document.getElementById('right');
 var index = 1;
 var timer;
 var isMoving = false;
+var vet = document.getElementById('vet').children;
+var vet1 = document.getElementById('vet1').children;
+var vetc = document.getElementById('vetc').children;
+var vetc1 = document.getElementById('vetc1').children;
+for(var i = 0; i<vet.length; i++){
+	vet[i].index = i;
+	vet[i].onmouseover = function () {
+		index = this.index + 1;
+		Change();
+		Change2();
+	}
+}
 
+//导航变化
+function Change() {
+	for(var i =0 ;i<vet.length;i++){
+		vet[i].id = '';
+	}
+	if(index == 5){
+		vet[0].id = "veta";
+	}else if(index == 0){
+		vet[3].id = "veta";
+	}else{
+		vet[index-1].id = "veta";	
+	}
+}
+
+for(var i = 0; i<vet1.length; i++){
+	vet1[i].index = i;
+	vet1[i].onmouseover = function () {
+		index = this.index + 1;
+		Change1();
+		Change3();
+	}
+}
+
+//导航变化
+function Change1() {
+	for(var i =0 ;i<vet1.length;i++){
+		vet1[i].id = '';
+	}
+	if(index == 5){
+		vet1[0].id = "veta1";
+	}else if(index == 0){
+		vet1[3].id = "veta1";
+	}else{
+		vet1[index-1].id = "veta1";	
+	}
+}
+
+function Change2() {
+	for(var i =0 ;i<vetc.length;i++){
+		vetc[i].id = '';
+	}
+	if(index == 5){
+		vetc[0].id = "vetca";
+	}else if(index == 0){
+		vetc[3].id = "vetca";
+	}else{
+		vetc[index-1].id = "vetca";	
+	}
+}
+
+function Change3() {
+	for(var i =0 ;i<vetc1.length;i++){
+		vetc1[i].id = '';
+	}
+	if(index == 5){
+		vetc1[0].id = "vetca1";
+	}else if(index == 0){
+		vetc1[3].id = "vetca1";
+	}else{
+		vetc1[index-1].id = "vetca1";	
+	}
+}
 //轮播下一张图片函数
 function next(){
 	if(!isMoving){
@@ -541,7 +629,7 @@ function prev(){
 	}	
 }
 
-var timer = setInterval(next,3000);
+var timer = setInterval(next,4000);
 
 //鼠标划入
 bigimg.onmouseover = function () {
@@ -554,7 +642,7 @@ bigimg.onmouseover = function () {
 bigimg.onmouseout = function () {
 	animate(left,{opacity:0});
 	animate(right,{opacity:0});
-	timer = setInterval(next,3000);
+	timer = setInterval(next,4000);
 }
 
 //右箭头点击事件
@@ -614,7 +702,8 @@ function navChange() {
 // 返回顶部
 window.onscroll = function(){
 
-  	var distance = document.documentElement.scrollTop || document.body.scrollTop; //距离页面顶部的距离
+  	var distance = document.documentElement.scrollTop || document.body.scrollTop; 
+  	//距离页面顶部的距离
 
   	if( distance >= 300 ) { //当距离顶部超过300px时，显示图片
     	document.getElementById('to_top').style.display = "";
