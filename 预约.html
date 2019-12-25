@@ -125,8 +125,23 @@
 			font-size: 12px;
 		}
 	</style>
+	<script type="text/javascript">
+		function confirmDialog() {
+			var con = window.confirm("提交成功");
+			if(con){
+				window.location.href = "bigMain.html"
+			}
+		}
+		// function confirmDialog() {
+		// 	var bConfirm = window.confirm("提交成功");
+		// 	if（bConfirm）{
+		// 		window.location.href = "bigMain.html";
+		// 	}
+		// }
+	</script>
 </head>
 <body>
+
 	<div class="yuyue">
 		<form>
 			<table>
@@ -165,9 +180,10 @@
 				</select>
 			</div>
 			<input type="reset" name="" value="重置" class="chongzhi">
-			<input type="button" name="submit" value="提交" class="tijiao"  />
+			<input type="button" name="submit" value="提交" class="tijiao" onclick="confirmDialog();">
 		</form>
 	</div>
+
 </body>
 
 </html>
