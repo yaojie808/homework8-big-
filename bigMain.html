@@ -239,6 +239,7 @@
 			height: 250px;
 			margin-right: 30px;
 			display: inline-block;
+			position: relative;
 		}
 		.vet>li > img{
 			width:250px;
@@ -332,6 +333,129 @@
 			cursor: pointer;
 			color: black;
 		}
+
+		/*灰色部分*/
+		.foot1{
+			width:100%;
+			height:70px;
+			background-color: #323232;
+			opacity: 50%;
+			margin-top: 100px;
+			position: absolute;
+			top:2130px;
+			/*border-top: 1px solid white;*/
+		}
+		.foot1 ul{
+			width:1200px;
+			height:70px;
+			margin:0px auto;
+		}
+		.foot1 ul li{
+			width: 290px;
+			height:50px;
+			display: inline-block;
+			margin-top: 29px;
+			border-left: 1px solid white;
+		}
+		.foot1 ul  li img{
+			float:left;
+		}
+		.foot ul li p{
+			width: 240px;
+			height:50px;
+			float:left;
+		}
+		.f1{
+			font-size: 19px;
+			color:white;
+		}
+		.f2{
+			font-size: 13px;
+			color:white;
+		}
+		.huise{
+			margin-left: 40px;
+		}
+
+	/*黑的部分*/
+		.foot2-wrap{
+			width:100%;
+			height:87px;
+			background-color: #323232;
+			position: absolute;
+			top: 2300px;
+		}
+		.foot2{
+			width:1200px;
+			height:87px;
+			margin:0px auto;
+		}
+		.black1{
+			margin-left:270px;
+		}
+		.black2{
+			margin-left: 450px;
+		}
+		.foot2 a{
+			text-decoration: none;
+			color:#ffffff;
+			font-size: 14px;
+			line-height: 70px;
+		}
+		.foot2 p{
+			color:#ffffff;
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		/*罩子*/
+		.hr{
+			width:250px;
+			height:50px;
+			position:absolute;
+			bottom:0px;
+			left:0px;
+			background-color:rgba(0,0,0,0.7);
+		}
+		.hr p{
+			color:#ffffff;
+			font-size:14px;
+			text-align:center;
+			height:25px;
+			line-height:25px;
+		}
+		#veta:hover .hr{
+			width:250px;
+			height:250px;
+			background-color:rgba(0,0,0,0.7);
+			position:absolute;
+			top:0px;
+			left:0px;
+		}
+		#veta:hover .hr p{
+			font-size:22px;
+			margin-top:100px;
+			line-height:2em;
+		}
+		#veta:hover .hr p>span{
+			border-bottom:3px solid rgb(134,57,55);
+		}
+		#veta1:hover .hr{
+			width:250px;
+			height:250px;
+			background-color:rgba(0,0,0,0.7);
+			position:absolute;
+			top:0px;
+			left:0px;
+		}
+		#veta1:hover .hr p{
+			font-size:22px;
+			margin-top:100px;
+			line-height:2em;
+		}
+		#veta1:hover .hr p>span{
+			border-bottom:3px solid rgb(134,57,55);
+		}
 	</style>
 	
 </head>
@@ -392,10 +516,35 @@
 <!-- 菜品 -->
 <div class="vetimg"><img src="菜品\有机菜品.png"></div>
 <ul class="vet" id="vet">
-	<li class="veta" id="veta"><img  src="菜品\白玉菇 .jpg" alt=""></li>
-	<li ><img src="菜品\秋葵 .jpg" alt=""></li>
-	<li ><img src="菜品\金针菇 .jpg" alt=""></li>
-	<li ><img src="菜品\肥牛.jpg" alt=""></li>
+	<li class="veta" id="veta">
+		<img  src="菜品\白玉菇 .jpg">
+		<div class="hr">
+	        <p>价格:<span>&nbsp;￥&nbsp;</span>15.00<br>
+	        脆滑鲜嫩,清甜可口</p>
+
+	    </div>
+	</li>
+	<li >
+		<img src="菜品\秋葵 .jpg" alt="">
+		<div class="hr">
+        	<p>价格:<span>&nbsp;￥&nbsp;</span>20.00<br>
+          	百菜之王,营养丰富</p>
+    	</div>
+	</li>
+	<li >
+		<img src="菜品\金针菇 .jpg" alt="">
+		<div class="hr">
+        	<p>价格:<span>&nbsp;￥&nbsp;</span>15.00<br>
+          	味美适口,清香扑鼻</p>
+    	</div>
+	</li>
+	<li >
+		<img src="菜品\肥牛.jpg" alt="">
+		<div class="hr">
+        	<p>价格:<span>&nbsp;￥&nbsp;</span>50.00<br>
+          入口绵润，回味无穷</p>
+    	</div>
+	</li>
 </ul>
 <ul class="vetc" id="vetc">
 	<li class="vetca" id="vetca">白玉菇</li>
@@ -404,10 +553,34 @@
 	<li>肥牛</li>
 </ul>
 <ul class="vet" id="vet1">
-	<li class="veta1" id="veta1"><img  src="菜品\毛肚.png" alt=""></li>
-	<li ><img  src="菜品\土豆.jpg" alt=""></li>
-	<li ><img  src="菜品\虾滑.jpg" alt=""></li>
-	<li ><img  src="菜品\油麦菜.jpg" alt=""></li>
+	<li class="veta1" id="veta1">
+		<img  src="菜品\毛肚.png" alt="">
+		<div class="hr">
+        	<p>价格:<span>&nbsp;￥&nbsp;</span>35.00<br>
+          	口感脆爽、易于消化</p>
+    	</div>
+	</li>
+	<li >
+		<img  src="菜品\土豆.jpg" alt="">
+		<div class="hr">
+        	<p>价格:<span>&nbsp;￥&nbsp;</span>10.00<br>
+          	功效良多,火锅必备</p>
+    	</div>
+	</li>
+	<li >
+		<img  src="菜品\虾滑.jpg" alt="">
+		<div class="hr">
+        	<p>竞猜价:<span>&nbsp;￥&nbsp;</span>40.00<br>
+          	新鲜食品,口感细腻</p>
+    	</div>
+	</li>
+	<li >
+		<img  src="菜品\油麦菜.jpg" alt="">
+		<div class="hr">
+        	<p>价格:<span>&nbsp;￥&nbsp;</span>10.00<br>
+          	清肝利胆,镇静安神</p>
+    	</div>
+	</li>
 </ul>
 <ul class="vetc" id="vetc1">
 	<li class="vetca1" id="vetca1">毛肚</li>
@@ -415,7 +588,71 @@
 	<li>虾滑</li>
 	<li>油麦菜</li>
 </ul>
-<!-- 侧边栏	 -->
+
+
+<!--灰色部分-->
+<div class="foot1">
+		<ul>
+		<li>
+		<div class="huise">
+			<div>
+				
+				<p class="f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资质认证</p>
+				<p class="f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;供应商100%实名认证</p>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class="huise">
+			<div class="pic-line">
+				
+				<p class="f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;线上支付安全</p>
+				<p class="f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;支付及信息安全</p>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class="huise">
+			<div class="pic-line">
+				
+				<p class="f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无需排队</p>
+				<p class="f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;预约排队先人一步</p>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class="huise">
+			<div class="pic-line">
+				
+				<p class="f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务无忧</p>
+				<p class="f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务出问题经理全程跟进</p>
+			</div>
+		</div>
+		</li>
+	</div>
+	</ul>
+
+<!--黑色部分-->
+	<div class="foot2-wrap">
+		<div class="foot2">
+		<p class="black1">
+			<a href='bigMain.html'>首页</a>&nbsp;|&nbsp;
+			<a href='#'>产品代理</a>&nbsp;|&nbsp;
+			<a href='#'>相关产业</a>&nbsp;|&nbsp;
+			<a href='#'>加盟合作</a>&nbsp;|&nbsp;
+			<a href='#'>企业贷款</a>&nbsp;|&nbsp;
+			<a href='#'>店面租赁</a>&nbsp;|&nbsp;
+			<a href='#'>会员管理</a>&nbsp;|&nbsp;
+			<a href='#'>法律服务</a>&nbsp;|&nbsp;
+		</p>
+		<p class="black2">
+			©&nbsp;2019-2020&nbsp;1024有限公司&nbsp;版权所有
+		</p>
+		</div>
+	</div>
+	</div>
+	</div>
+	<!-- 侧边栏	 -->
 <div class="side" id="side">
 	<span class="span1">
 		<p>1</p>
@@ -450,7 +687,7 @@
 	</span>
 </div>
 
-<!-- 返回顶部 -->
+	<!-- 返回顶部 -->
 <div id="to_top" title="返回顶部">
   	<img src="大图/top.png" width="40" height="40" />
   	<p>返回顶部</p>
