@@ -109,14 +109,14 @@
 			height: 250px;
 			width: 240px;
 			position: fixed;
-			bottom: 30px;
+			bottom: 60px;
 			right: 0px;
 		}
 		#litter-picture{
 			height: 240px;
 			width: 240px;
 			position: fixed;
-			bottom: 60px;
+			bottom: 90px;
 			right: 0px;
 		}
 		#litterwrite{
@@ -496,6 +496,78 @@
 		#time24{
 			font-size: 15px;
 		}
+
+	/*灰色部分*/
+		.foot1{
+			width:100%;
+			height:102px;
+			background-color: #f5f5f5;
+			margin-top: 100px;
+			position: absolute;
+			top:1900px;
+		}
+		.foot1 ul{
+			width:1200px;
+			height:100px;
+			margin:0px auto;
+		}
+		.foot1 ul li{
+			width: 290px;
+			height:50px;
+			display: inline-block;
+			margin-top: 29px;
+			border-left: 1px solid #e0e0e0;
+		}
+		.foot1 ul  li img{
+			float:left;
+		}
+		.foot ul li p{
+			width: 240px;
+			height:50px;
+			float:left;
+		}
+		.f1{
+			font-size: 19px;
+			color:#333333;
+		}
+		.f2{
+			font-size: 13px;
+			color:#333333;
+		}
+		.huise{
+			margin-left: 40px;
+		}
+
+	/*黑的部分*/
+		.foot2-wrap{
+			width:100%;
+			height:100px;
+			background-color: #323232;
+			position: absolute;
+			top: 2100px;
+		}
+		.foot2{
+			width:1200px;
+			height:100px;
+			margin:0px auto;
+		}
+		.black1{
+			margin-left:270px;
+		}
+		.black2{
+			margin-left: 450px;
+		}
+		.foot2 a{
+			text-decoration: none;
+			color:#ffffff;
+			font-size: 14px;
+			line-height: 70px;
+		}
+		.foot2 p{
+			color:#ffffff;
+			font-size: 14px;
+			line-height: 20px;
+		}
 	</style>
 </head>
 <body>
@@ -506,13 +578,6 @@
 		<a href="#" class="reda"><img id = "right" src="images/redpacket.gif"></a>
 	</div>
 
-<!-- 右侧垃圾分类部分 -->
-	<div class="litter-wrap">
-		<div class="litter" >
-			<a href="web08.html"><img id="litter-picture"src="images/垃圾分类.gif"></a>
-			<p id="litterwrite">点此垃圾分类</p>
-		</div>
-	</div>
 
 <!-- 正文：门店介绍 -->
 	<div class="stores-wrap">
@@ -600,8 +665,76 @@
 				</li>
 			</ul>
 		</div>
+		<!--灰色部分-->
+<div class="foot1">
+		<ul>
+		<li>
+		<div class="huise">
+			<div>
+				<img src="images/f1.png" alt="f1"/>
+				<p class="f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资质认证</p>
+				<p class="f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;供应商100%实名认证</p>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class="huise">
+			<div class="pic-line">
+				<img src="images/f2.png" alt="f2"/>
+				<p class="f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;线上支付安全</p>
+				<p class="f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;支付及信息安全</p>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class="huise">
+			<div class="pic-line">
+				<img src="images/f3.png" alt="f3"/>
+				<p class="f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无需排队</p>
+				<p class="f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;预约排队先人一步</p>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class="huise">
+			<div class="pic-line">
+				<img src="images/f4.png" alt="f4"/>
+				<p class="f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;售后无忧</p>
+				<p class="f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务出问题经理全程跟进</p>
+			</div>
+		</div>
+		</li>
+	</div>
+	</ul>
+
+<!--黑色部分-->
+	<div class="foot2-wrap">
+		<div class="foot2">
+		<p class="black1">
+			<a href='bigMain.html'>首页</a>&nbsp;|&nbsp;
+			<a href='#'>工商代理</a>&nbsp;|&nbsp;
+			<a href='#'>财务代记账</a>&nbsp;|&nbsp;
+			<a href='#'>股权交易与变更</a>&nbsp;|&nbsp;
+			<a href='#'>企业贷款</a>&nbsp;|&nbsp;
+			<a href='#'>办公室租赁</a>&nbsp;|&nbsp;
+			<a href='#'>社保公积金代理</a>&nbsp;|&nbsp;
+			<a href='#'>法律服务</a>&nbsp;|&nbsp;
+		</p>
+		<p class="black2">
+			©&nbsp;2019-2020&nbsp;1024有限公司&nbsp;版权所有
+		</p>
+		</div>
+	</div>
+	</div>
 	</div>
 
+	<!-- 右侧垃圾分类部分 -->
+	<div class="litter-wrap">
+		<div class="litter" >
+			<a href="lajifenlei.html"><img id="litter-picture"src="images/垃圾分类.gif"></a>
+			<p id="litterwrite">点此垃圾分类</p>
+		</div>
+	</div>
 
 
 <!-- 左侧倒计时 -->
@@ -667,6 +800,7 @@
         </li>
     </ul>
 </div>
+
 <!-- js -->
 	<script type="text/javascript">
 		// function redpacket(){
