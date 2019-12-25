@@ -14,7 +14,7 @@
        		border: 0; 
        	} 
 	    html,body{
-	    
+	    	width:100%;
 	        margin: 0;
 	    }
 	    @-webkit-keyframes STAR-MOVE {
@@ -162,12 +162,23 @@
 		.p5{
 			position: absolute;
 			top:230px;
-			right:50px;
+			right:80px;
 		}
-		.t3{
+		.t2{
 			position: absolute;
 			top:-50px;
-			left:-50px;
+			left:-100px;
+		}
+
+		.p6{
+			position: absolute;
+			top:130px;
+			left:85px;
+		}
+		.p7{
+			position: absolute;
+			top:150px;
+			left:80px;
 		}
     </style>
 </head>
@@ -194,12 +205,17 @@
     	<img src="img/b4.png" width="150px" height="250px" class="b4" id="b4">
     	<img src="img/p4.png" width="110px" height="30px" class="p4" id="p4">
 
-    	<img src="img/t2.png" width="350px" height="350px" class="t3" id="t3">
+    	<img src="img/t2.png" width="450px" height="350px" class="t2" id="t2">
+    	<p class="p6">点击垃圾让它</p>
+    	<p class="p7">回到自己的家哦！</p>
 
     	<div class = "jump">
     		<img src="img/GIF.gif" width="300px" height="300px" class="gif" id="gif">
    		</div>
-   		<p class="p5">点我返回哦！</p>
+
+   		<p class="p5">点我返回哦</p>
+   		
+
     </div>
     
 	<!-- 垃圾分类 -->
@@ -209,11 +225,11 @@
 	    window.onload = function(){
 	    	var imga = document.getElementById('img1');
 			imga.onclick = function(){
-				animate(imga,{left:800,top:400,opacity:0})
+				animate(imga,{left:300,top:400,opacity:0})
 			}
 			var imgb = document.getElementById('img2');
 			imgb.onclick = function(){
-				animate(imgb,{left:600,top:400,opacity:0})
+				animate(imgb,{left:300,top:400,opacity:0})
 			}
 			var imgc = document.getElementById('img3');
 			imgc.onclick = function(){
@@ -221,14 +237,14 @@
 			}
 			var imgd = document.getElementById('img4');
 			imgd.onclick = function(){
-				animate(imgd,{left:400,top:400,opacity:0})
+				animate(imgd,{left:300,top:400,opacity:0})
 			}
 			var imge = document.getElementById('img5');
 			imge.onclick = function(){
-				animate(imge,{left:300,top:450,opacity:0})
+				animate(imge,{left:300,top:400,opacity:0})
 			}
 
-			图片跳动
+			// 图片跳动
 			setTimeout(function(){
 				var jump = document.getElementById('gif');
 				if(jump.style.top == 450)
